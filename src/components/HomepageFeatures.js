@@ -4,42 +4,42 @@ import styles from "./HomepageFeatures.module.css";
 
 const FeatureList = [
   {
-    title: "Explore",
-    Svg: require("../../static/img/undraw_docusaurus_mountain.svg").default,
+    title: "Create robot swarms",
+    Png: require("../../static/img/robot_swarms.png").default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        You are a space cadet in the Galaxy of Morpheus. Create robots and enjoy
+        your new adventure.
       </>
     ),
   },
   {
-    title: "Mine",
-    Svg: require("../../static/img/undraw_docusaurus_tree.svg").default,
+    title: "Mine Resources",
+    Png: require("../../static/img/galaxy.png").default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        The planets are rich of expensive resources. Mine them and upgrade your
+        fleet of robots. Beware of pirates!
       </>
     ),
   },
   {
-    title: "Fight",
-    Svg: require("../../static/img/undraw_docusaurus_react.svg").default,
+    title: "Engage in fights",
+    Png: require("../../static/img/fight.png").default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Will you be a pacifist or a warmonger. Fight other players in this
+        battle of the galaxy.
       </>
     ),
   },
 ];
 
-function Feature({ Svg, title, description }) {
+function Feature({ Png, title, description }) {
   return (
     <div className={clsx("col col--4")}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} alt={title} />
+        <img src={Png} alt={title} className={styles.featurePng} />
       </div>
       <div className="text--center padding-horiz--md">
         <h3>{title}</h3>

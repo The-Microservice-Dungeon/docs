@@ -1,17 +1,11 @@
-endi:
-  name: Endilie Yacop Sucipto
-  title: Maintainer of Docusaurus
-  url: https://github.com/endiliey
-  image_url: https://github.com/endiliey.png
+daniel:
+  name: Daniel Khaapamyaki
+  title: Code & Context Student
+  url: https://github.com/daskycodes
+  image_url: https://github.com/daskycodes.png
 
-yangshun:
-  name: Yangshun Tay
-  title: Front End Engineer @ Facebook
-  url: https://github.com/yangshun
-  image_url: https://github.com/yangshun.png
-
-slorber:
-  name: Sébastien Lorber
-  title: Docusaurus maintainer
-  url: https://sebastienlorber.com
-  image_url: https://github.com/slorber.png
+valerij:
+  name: Valerij Leis
+  title: Code & Context Student
+  url: https://github.com/Valle4269
+  image_url: https://github.com/Valle4269.png
