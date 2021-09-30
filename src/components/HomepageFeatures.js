@@ -5,7 +5,7 @@ import styles from "./HomepageFeatures.module.css";
 const FeatureList = [
   {
     title: "Create robot swarms",
-    Png: require("../../static/img/robot_swarms.png").default,
+    Png: require("../../static/img/robot_swarm.png").default,
     description: (
       <>
         You are a space cadet in the Galaxy of Morpheus. Create robots and enjoy
