@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://The-Microservice-Dungeon.github.io/docs/blog</id>
     <title>The Microservice Dungeon Blog</title>
-    <updated>2021-08-26T00:00:00.000Z</updated>
+    <updated>2021-09-30T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://The-Microservice-Dungeon.github.io/docs/blog"/>
     <subtitle>The Microservice Dungeon Blog</subtitle>
@@ -11,48 +11,14 @@
         <title type="html"><![CDATA[Welcome]]></title>
         <id>welcome</id>
         <link href="https://The-Microservice-Dungeon.github.io/docs/blog/welcome"/>
-        <updated>2021-08-26T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Docusaurus blogging features are powered by the blog plugin.]]></summary>
+        <updated>2021-09-30T00:00:00.000Z</updated>
         <author>
-            <name>Sébastien Lorber</name>
-            <uri>https://sebastienlorber.com</uri>
+            <name>Valerij Leis</name>
+            <uri>https://github.com/Valle4269</uri>
         </author>
         <author>
-            <name>Yangshun Tay</name>
-            <uri>https://github.com/yangshun</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[MDX Blog Post]]></title>
-        <id>mdx-blog-post</id>
-        <link href="https://The-Microservice-Dungeon.github.io/docs/blog/mdx-blog-post"/>
-        <updated>2021-08-01T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Blog posts support Docusaurus Markdown features, such as MDX.]]></summary>
-        <author>
-            <name>Sébastien Lorber</name>
-            <uri>https://sebastienlorber.com</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Long Blog Post]]></title>
-        <id>long-blog-post</id>
-        <link href="https://The-Microservice-Dungeon.github.io/docs/blog/long-blog-post"/>
-        <updated>2019-05-29T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[This is the summary of a very long blog post,]]></summary>
-        <author>
-            <name>Endilie Yacop Sucipto</name>
-            <uri>https://github.com/endiliey</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[First Blog Post]]></title>
-        <id>first-blog-post</id>
-        <link href="https://The-Microservice-Dungeon.github.io/docs/blog/first-blog-post"/>
-        <updated>2019-05-28T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet]]></summary>
-        <author>
-            <name>Gao Wei</name>
-            <uri>https://github.com/wgao19</uri>
+            <name>Daniel Khaapamyaki</name>
+            <uri>https://github.com/daskycodes</uri>
         </author>
     </entry>
 </feed>
