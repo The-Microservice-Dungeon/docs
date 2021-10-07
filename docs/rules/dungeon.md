@@ -49,7 +49,7 @@ Each robot starts at the player's spawn point.
 
 Each player starts with 200$ and 1 basic robot.
 
-When your last robot is destoryed, you respawn with your start resources (200$ and 1 basic robot).
+When your last robot is destroyed, you respawn with your start resources (200$ and 1 basic robot).
 
 A spawn is similair to a spacestation but with the following additions:
 

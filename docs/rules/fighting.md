@@ -27,7 +27,7 @@ You can build barricades to stop other players from leaving the room.
 
 Each action will be batched into a scheduler. The sequence order of actions executed is as follows:
 
-blocking -> trading -> movement -> battle -> mining -> scanning
+`Blocking` -> `Trading` -> `Movement` -> `Battle` -> `Mining` -> `Scouting`
 
 Please read the [Gameloop](/rules/gameloop) information to get a better understanding.
 
