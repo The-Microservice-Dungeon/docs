@@ -22,6 +22,8 @@ You can only see the contents of the planet you are currently in.
 
 ### Movement
 
+Each ship can only move one room each turn (some special items like "wormhole" cause exeptions).
+
 There are different types of gravity on each planet, where it get's more difficult to moving through these planets.
 
 | Gravity | Energy Costs |
@@ -44,8 +46,13 @@ Spacestations are a special type of planet where you have the option to:
 ### Spawns
 
 Each robot starts at the player's spawn point.
+
+Each player starts with 200$ and 1 basic robot.
+
+When your last robot is destoryed, you respawn with your start resources (200$ and 1 basic robot).
+
 A spawn is similair to a spacestation but with the following additions:
 
-- It's a safe zone
-- It can only be entered by the robots which spawned in it
+- It's a safe zone meaning no robot of a different faction can enter the spawn
+- It can only be entered by the robots which belong to the team that spawned there
 - Energy regeneration is twice as fast
