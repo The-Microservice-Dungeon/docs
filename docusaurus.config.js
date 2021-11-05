@@ -16,6 +16,15 @@ module.exports = {
 
   presets: [
     [
+      'redocusaurus',
+      {
+        specs: [{
+          specUrl: 'https://raw.githubusercontent.com/The-Microservice-Dungeon/map/main/swagger/v1/swagger.yaml',
+          routePath: "/openapi/map"
+        }],
+      }
+    ],
+    [
       "@docusaurus/preset-classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
@@ -54,8 +63,9 @@ module.exports = {
             type: "doc",
             docId: "intro",
             position: "left",
-            label: "Tutorial",
+            label: "Introduction",
           },
+          { to: "/openapi/map", label: "Map OpenAPI", position: "left" },
           { to: "/blog", label: "Blog", position: "left" },
           {
             href: "https://github.com/The-Microservice-Dungeon",
