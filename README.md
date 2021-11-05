@@ -31,3 +31,29 @@ $ GIT_USER=<Your GitHub username> USE_SSH=true yarn deploy
 ```
 
 If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+
+### Add your OpenAPI spec
+
+Update the `docuaurus.config.js` where you add another spec
+
+```javascript
+...
+      'redocusaurus',
+      {
+        specs: [
+          {
+            specUrl: 'https://raw.githubusercontent.com/The-Microservice-Dungeon/map/main/swagger/v1/swagger.yaml',
+            routePath: "/openapi/map"
+          },
+          {
+            specUrl: 'https://raw.githubusercontent.com/The-Microservice-Dungeon/MYSERVICE/main/swagger.yaml',
+            routePath: "/openapi/MYSERVICE"
+          }, 
+        ],
+      }
+
+...
+
+          { to: "/openapi/map", label: "Map OpenAPI", position: "left" },
+          { to: "/openapi/MYSERVIC", label: "MYSERVICE OpenAPI", position: "left" },
+```

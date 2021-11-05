@@ -18,10 +18,12 @@ module.exports = {
     [
       'redocusaurus',
       {
-        specs: [{
-          specUrl: 'https://raw.githubusercontent.com/The-Microservice-Dungeon/map/main/swagger/v1/swagger.yaml',
-          routePath: "/openapi/map"
-        }],
+        specs: [
+          {
+            specUrl: 'https://raw.githubusercontent.com/The-Microservice-Dungeon/map/main/swagger/v1/swagger.yaml',
+            routePath: "/openapi/map"
+          }
+        ],
       }
     ],
     [
