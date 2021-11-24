@@ -24,7 +24,7 @@ module.exports = {
             routePath: "/openapi/map"
           },
           {
-            specUrl: 'https://raw.githubusercontent.com/The-Microservice-Dungeon/robot/main/swagger/v2/swagger.yaml',
+            specUrl: 'https://raw.githubusercontent.com/The-Microservice-Dungeon/robot/main/swagger/v3/swagger.yaml',
             routePath: "/openapi/robot"
           },
           {
