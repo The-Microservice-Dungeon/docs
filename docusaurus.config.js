@@ -30,6 +30,10 @@ module.exports = {
           {
             specUrl: 'https://raw.githubusercontent.com/The-Microservice-Dungeon/trading/main/swagger/v1/swagger.yaml',
             routePath: "/openapi/trading"
+          },
+          {
+            specUrl: 'https://raw.githubusercontent.com/The-Microservice-Dungeon/gamelog/main/docs/api-spec.yaml',
+            routePath: "/openapi/gamelog"
           }
         ],
       }
@@ -78,6 +82,7 @@ module.exports = {
           { to: "/openapi/map", label: "Map OpenAPI", position: "left" },
           { to: "/openapi/robot", label: "Robot OpenAPI", position: "left" },
           { to: "/openapi/trading", label: "Trading OpenAPI", position: "left" },
+          { to: "/openapi/gamelog", label: "Gamelog OpenAPI", position: "left" },
           { to: "/blog", label: "Blog", position: "left" },
           {
             href: "https://github.com/The-Microservice-Dungeon",
