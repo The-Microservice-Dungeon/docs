@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[521],{795:function(e){e.exports=JSON.parse('{"specUrl":"https://raw.githubusercontent.com/The-Microservice-Dungeon/game/main/doc/Game_Service_API_v3.1.yaml","type":"url","content":"https://raw.githubusercontent.com/The-Microservice-Dungeon/game/main/doc/Game_Service_API_v3.1.yaml"}')}}]);
