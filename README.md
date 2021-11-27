@@ -34,7 +34,7 @@ If you are using GitHub pages for hosting, this command is a convenient way to b
 
 ### Add your OpenAPI spec
 
-Update the `docuaurus.config.js` where to add another spec
+Update the `docuaurus.config.js` to add another spec
 
 ```javascript
 ...
@@ -60,7 +60,7 @@ Update the `docuaurus.config.js` where to add another spec
 
 ### Add your AsyncAPI spec
 
-Update the `docuaurus.config.js` where to add another spec
+Update the `docuaurus.config.js` to add another spec
 
 ```js
   customFields: {
