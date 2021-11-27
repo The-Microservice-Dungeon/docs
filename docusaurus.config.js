@@ -18,8 +18,8 @@ module.exports = {
     asyncApiSpec: {
       map: "https://raw.githubusercontent.com/The-Microservice-Dungeon/map/main/asyncapi/asyncapi.yml",
       robot: "",
-      trading: "",
-      gamelog: "",
+      trading: "https://raw.githubusercontent.com/The-Microservice-Dungeon/trading/main/swagger/v1/asyncAPI.yaml",
+      gamelog: "https://raw.githubusercontent.com/The-Microservice-Dungeon/gamelog/main/docs/event-spec.yaml",
       game: "",
     }
   },
