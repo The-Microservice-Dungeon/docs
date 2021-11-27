@@ -34,7 +34,7 @@ If you are using GitHub pages for hosting, this command is a convenient way to b
 
 ### Add your OpenAPI spec
 
-Update the `docuaurus.config.js` where you add another spec
+Update the `docuaurus.config.js` where to add another spec
 
 ```javascript
 ...
@@ -56,4 +56,20 @@ Update the `docuaurus.config.js` where you add another spec
 
           { to: "/openapi/map", label: "Map OpenAPI", position: "left" },
           { to: "/openapi/MYSERVIC", label: "MYSERVICE OpenAPI", position: "left" },
+```
+
+### Add your AsyncAPI spec
+
+Update the `docuaurus.config.js` where to add another spec
+
+```js
+  customFields: {
+    asyncApiSpec: {
+      map: "https://raw.githubusercontent.com/The-Microservice-Dungeon/map/main/asyncapi/asyncapi.yml",
+      robot: "",
+      trading: "",
+      gamelog: "",
+      game: "",
+    }
+  },
 ```

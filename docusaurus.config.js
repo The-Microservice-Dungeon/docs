@@ -14,6 +14,16 @@ module.exports = {
   organizationName: "The-Microservice-Dungeon", // Usually your GitHub org/user name.
   projectName: "docs", // Usually your repo name.
 
+  customFields: {
+    asyncApiSpec: {
+      map: "https://raw.githubusercontent.com/The-Microservice-Dungeon/map/main/asyncapi/asyncapi.yml",
+      robot: "",
+      trading: "",
+      gamelog: "",
+      game: "",
+    }
+  },
+
   presets: [
     [
       'redocusaurus',
@@ -81,13 +91,48 @@ module.exports = {
             type: "doc",
             docId: "intro",
             position: "left",
-            label: "Introduction",
+            label: "Guide",
           },
-          { to: "/openapi/map", label: "Map OpenAPI", position: "left" },
-          { to: "/openapi/robot", label: "Robot OpenAPI", position: "left" },
-          { to: "/openapi/trading", label: "Trading OpenAPI", position: "left" },
-          { to: "/openapi/gamelog", label: "Gamelog OpenAPI", position: "left" },
-          { to: "/openapi/game", label: "Game OpenAPI", position: "left" },
+          {
+            label: "Map",
+            position: "left",
+            items: [
+              { to: "/openapi/map", label: "Map OpenAPI" },
+              { to: "/asyncapi/map", label: "Map AsyncAPI" }
+            ]
+          },
+          {
+            label: "Robot",
+            position: "left",
+            items: [
+              { to: "/openapi/robot", label: "Robot OpenAPI" },
+              { to: "/asyncapi/robot", label: "Robot AsyncAPI" }
+            ]
+          },
+          {
+            label: "Trading",
+            position: "left",
+            items: [
+              { to: "/openapi/trading", label: "Trading OpenAPI" },
+              { to: "/asyncapi/trading", label: "Trading AsyncAPI" }
+            ]
+          },
+          {
+            label: "Gamelog",
+            position: "left",
+            items: [
+              { to: "/openapi/gamelog", label: "Gamelog OpenAPI" },
+              { to: "/asyncapi/gamelog", label: "Gamelog AsyncAPI" }
+            ]
+          },
+          {
+            label: "Game",
+            position: "left",
+            items: [
+              { to: "/openapi/game", label: "Game OpenAPI" },
+              { to: "/asyncapi/game", label: "Game AsyncAPI" }
+            ]
+          },
           { to: "/blog", label: "Blog", position: "left" },
           {
             href: "https://github.com/The-Microservice-Dungeon",
