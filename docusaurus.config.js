@@ -17,7 +17,7 @@ module.exports = {
   customFields: {
     asyncApiSpec: {
       map: "https://raw.githubusercontent.com/The-Microservice-Dungeon/map/main/asyncapi/asyncapi.yml",
-      robot: "",
+      robot: "https://raw.githubusercontent.com/The-Microservice-Dungeon/robot/main/swagger/v3/asyncapi.yaml",
       trading: "https://raw.githubusercontent.com/The-Microservice-Dungeon/trading/main/swagger/v1/asyncAPI.yaml",
       gamelog: "https://raw.githubusercontent.com/The-Microservice-Dungeon/gamelog/main/docs/event-spec.yaml",
       game: "",
