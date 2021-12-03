@@ -17,7 +17,7 @@ module.exports = {
   customFields: {
     asyncApiSpec: {
       map: "https://raw.githubusercontent.com/The-Microservice-Dungeon/map/main/asyncapi/asyncapi.yml",
-      robot: "https://raw.githubusercontent.com/The-Microservice-Dungeon/robot/main/swagger/v4/asyncapi.yaml",
+      robot: "https://raw.githubusercontent.com/The-Microservice-Dungeon/robot/main/swagger/v5/asyncapi.yaml",
       trading: "https://raw.githubusercontent.com/The-Microservice-Dungeon/trading/main/swagger/v1/asyncAPI.yaml",
       gamelog: "https://raw.githubusercontent.com/The-Microservice-Dungeon/gamelog/main/docs/event-spec.yaml",
       game: "https://raw.githubusercontent.com/The-Microservice-Dungeon/game/main/api/game_service_asyncapi_v1.0.0.yml",
@@ -34,7 +34,7 @@ module.exports = {
             routePath: "/openapi/map"
           },
           {
-            specUrl: 'https://raw.githubusercontent.com/The-Microservice-Dungeon/robot/main/swagger/v4/swagger.yaml',
+            specUrl: 'https://raw.githubusercontent.com/The-Microservice-Dungeon/robot/main/swagger/v5/swagger.yaml',
             routePath: "/openapi/robot"
           },
           {
