@@ -4,9 +4,11 @@ sidebar_position: 1
 
 # Dungeon
 
-The dungeon in our game is the central service which consists of planets and locations of spawns, spacestations and mineable resources.
+The dungeon represents the gameworld and is one of the central services in our microservice dungeon game.
 
-![Dungeon Example](/img/rules/dungeon_alpha_0.1.png)
+It consists of several planets, connected with other neighbouring planets.
+
+![Dungeon Example](/img/rules/dungeon.png)
 
 ## Planets
 
@@ -16,7 +18,7 @@ As player you only know the existence of the planets you have been in and which 
 
 A robot can only move to a neighbouring planet. (Exception granted for special items.)
 
-There can be several robots in one room, with no upper limit.
+There can be several robots one a planet, with no upper limit.
 
 You can only see the contents of the planet you are currently in.
 
@@ -36,23 +38,12 @@ There are different types of gravity on each planet, where it get's more difficu
 
 ### Spacestations
 
-Spacestations are a special type of planet where you have the option to:
+Spacestations are a special type of planet, which can be seen as trading and spawn posts.
+
+On a spacestation you can:
 
 - Sell resources
 - Repair robots
 - Upgrade robots
 - Buy robots
 
-### Spawns
-
-Each robot starts at the player's spawn point.
-
-Each player starts with 200$ and 1 basic robot.
-
-When your last robot is destroyed, you respawn with your start resources (200$ and 1 basic robot).
-
-A spawn is similair to a spacestation but with the following additions:
-
-- It's a safe zone meaning no robot of a different faction can enter the spawn
-- It can only be entered by the robots which belong to the team that spawned there
-- Energy regeneration is twice as fast
