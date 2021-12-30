@@ -46,7 +46,7 @@ module.exports = {
             routePath: "/openapi/gamelog"
           },
           {
-            specUrl: 'https://raw.githubusercontent.com/The-Microservice-Dungeon/game/main/doc/game_service_api_v3.1.0.yaml',
+            specUrl: 'https://raw.githubusercontent.com/The-Microservice-Dungeon/game/main/doc/game_service_api_v3.2.0.yaml',
             routePath: "/openapi/game"
           }
         ],
