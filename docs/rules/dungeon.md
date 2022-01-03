@@ -45,5 +45,6 @@ On a spacestation you can:
 - Sell resources
 - Repair robots
 - Upgrade robots
-- Buy robots
+
+Buying robots can be done globally.
 
