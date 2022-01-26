@@ -11,11 +11,11 @@ Each resource can be mined by robots and later [sold for moneten 💸](/rules/tr
 
 | Resource | Cost | Rarity |
 | -------- | ---- | ------ |
-| Coal     | 1,5  | 16     |
-| Iron     | 3    | 7      |
-| Gem      | 6    | 3      |
-| Gold     | 12   | 2      |
-| Platin   | 24   | 1      |
+| Coal     | 5    | 16     |
+| Iron     | 15   | 7      |
+| Gem      | 30   | 3      |
+| Gold     | 50   | 2      |
+| Platin   | 60   | 1      |
 
 After every mining or scanning of a resource field the player which has mined or scanned said room gets notified of the remaining amount of resources.
 
