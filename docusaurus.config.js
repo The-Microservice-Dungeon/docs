@@ -94,6 +94,12 @@ module.exports = {
             label: "Guide",
           },
           {
+            type: "doc",
+            docId: "dennis_file",
+            position: "left",
+            label: "Dennis",
+          },
+          {
             label: "Map",
             position: "left",
             items: [
