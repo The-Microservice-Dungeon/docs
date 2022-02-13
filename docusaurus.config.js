@@ -91,7 +91,7 @@ module.exports = {
             type: "doc",
             docId: "intro",
             position: "left",
-            label: "Guide",
+            label: "Project",
           },
           {
             type: "doc",
