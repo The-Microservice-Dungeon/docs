@@ -1,9 +1,9 @@
 ---
-id: dennis_file
+id: quickstart_entry
 sidebar_position: 3
 ---
 
-# Thema
+# Quickstart Guide Overview
 
 :::danger Take care
 

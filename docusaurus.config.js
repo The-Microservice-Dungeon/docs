@@ -95,9 +95,9 @@ module.exports = {
           },
           {
             type: "doc",
-            docId: "dennis_file",
+            docId: "quickstart_entry",
             position: "left",
-            label: "Dennis",
+            label: "Quickstart Guide",
           },
           {
             label: "Map",

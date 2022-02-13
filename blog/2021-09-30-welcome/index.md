@@ -1,6 +1,6 @@
 ---
 slug: welcome
 title: Welcome
-authors: [valerij, daniel]
+authors: [valerij, daniel, dennis]
 tags: [game]
 ---
