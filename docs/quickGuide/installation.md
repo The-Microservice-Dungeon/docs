@@ -4,7 +4,10 @@ sidebar_position: 1
 
 # Project Installation
 
-How to set up a local dev environment for the The-Microservice-Dungeon Project
+How to set up a local dev environment for the The-Microservice-Dungeon Project:
+
+Github Repository:
+[local-dev-environment](https://github.com/The-Microservice-Dungeon/local-dev-environment)
 
 ## Prerequisites
 
@@ -17,6 +20,9 @@ How to set up a local dev environment for the The-Microservice-Dungeon Project
 * pyyaml
 
         pip3 install pyyaml
+
+* Github Repository:
+[local-dev-environment](https://github.com/The-Microservice-Dungeon/local-dev-environment)
 
 ## Usage
 
@@ -45,20 +51,21 @@ It will also be possible to create a custom dev environment, but since this feat
 
 ### Hints
 
-
         python3 dungeon-dev-env.py -i 
-always needs to be run before -r
+
+always needs to be run before **-r**.
 
 ***
 
-Before running -p, you need to manually create a directory **./classesplayer_configs**.
-It will not be persisted, there is an entry in .gitignore.
+Before running **-p**, you need to manually create a directory **./classesplayer_configs**.
+It will not be persisted, there is an entry in **.gitignore**.
 
 ***
-
-        python3 dungeon-dev-env.py -d
-will display an error message like:
 
 > Error: No such image: confluentinc/cp-zookeeper.
+
+This error massege is produced by:
+
+        python3 dungeon-dev-env.py -d
 
 This is caused by the deletition method and can be safely ignored.
