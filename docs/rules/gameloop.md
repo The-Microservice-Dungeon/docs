@@ -16,4 +16,4 @@ Actions will be batched together and executed after each other in the following 
 3. Moving
 4. Fighting
 5. Mining
-6. Scouting
+6. Scouting(deprecated not implemented)

@@ -27,6 +27,14 @@ First step is to create a Game. For that you will use a REST call.
         "maxPlayers": 6
     }
 
+You should get a `UUID` as a response! If not something went wrong.
+
+>**Response example payload**
+
+    {
+        "gameId": "d290f1ee-6c54-4b01-90e6-d701748f0851"
+    }
+
 * A "Game" consists of rounds, explained in [Gameloop](https://the-microservice-dungeon.github.io/docs/rules/gameloop). You have to specify the ammount of  rounds that will be played till the automatic end of a game.
 
 * Also you can specify the ammount of players that will be competing. For a game to start, it is not nessecery to reach the maximum ammount of players. The game mecahnics like mapsize will scale with the actual ammount of players at the **"3. Start Game"**.
@@ -74,12 +82,19 @@ Please refer to the Chapter [Player Basics](https://the-microservice-dungeon.git
 
 ## 3. Start Game(play)
 
-
 ## 4. Player issues Commandes
 
 Please refer to the Chapter [Player Basics](https://the-microservice-dungeon.github.io/docs/quickGuide/howToBuildAPlayer)
 
 ## 5. End Game(play)
+
+There are three posipilities how a game should end.
+
+* The game has reached the round number, which was defined earlier.
+
+* You tried to change the maximum round number and the new value was lower than the current round count of the game.
+
+* You used the **POST** http://{defaultHost}/games/{gameId}/gameCommands/end REST call to end a game.
 
 ## Warning
 
