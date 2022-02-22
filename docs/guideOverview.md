@@ -1,30 +1,26 @@
 ---
 id: quickstart_entry
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 # Quickstart Guide Overview
 
-:::danger
+This three part Quickstart Guide can be seen as a "Hello world" programm.
 
-Project under development
+## [1. Project Instalation](/docs/quickGuide/installation.md)
+
+How can I download and run a local version of The-Microservice-Dungeon?
+
+## [2. Game Basics / Technical Gamecycle](/docs/quickGuide/gameBasics.md)
+
+How do I run a The-Microservice-Dungeon Game?
+
+## [3. Player Basics](/docs/quickGuide/howToBuildAPlayer.md)
+
+What do I need to know to build a basic Player that interacts with The-Microservice-Dungeon Game.
+
+:::warning
+
+under development
 
 :::
-
-***
-
-## Project Instalation
-
-How can I download and run al local version of The-Microservice-Dungeon?
-
-***
-
-## Game Basics
-
-What does The-Microservice-Dungeon consists of and how do I run it?
-
-***
-
-## Player Basics
-
-What do i need to know to build a basic Player that interacts with The-Microservice-Dungeon Microservices.
