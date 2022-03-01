@@ -94,7 +94,9 @@ There are three posipilities how a game should end.
 
 * You tried to change the maximum round number and the new value was lower than the current round count of the game.
 
-* You used the **POST** http://{defaultHost}/games/{gameId}/gameCommands/end REST call to end a game.
+* You used the **POST** REST call to end a game.
+
+        http://{defaultHost}/games/{gameId}/gameCommands/end
 
 ## Warning
 
