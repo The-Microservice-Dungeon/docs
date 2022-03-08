@@ -26,6 +26,8 @@ The players recieves an id, to find the right event, that informs him of the out
 * Phase: Command Input started
 * Phase: Command Input ended
 * Phase: Command execution started
+
+
 * Command execution Phase: Blocking started
 * Command execution Phase: Blocking ended
 * Command execution Phase: Trading started
@@ -50,10 +52,10 @@ The original gameloop was changed from 1. Blocking -> 2. Trading -> 3. Moving ->
 
 ## Notes to Gameplay
 
-* Chosen option: Generic command entity owned by Game, payload owned by services to whom command is routed
-commands are owned by the Game Service
+* Chosen option: Generic command entity owned by Game, payload owned by services to whom command is routed. 
 
 * Game Service receives commands from the players and is responsible for sorting them by their execution phase
 
 * Game Service sends a package with commands to the associated service during the correct phase, the other service executes the commands directly after receiving it (other services have no awareness about phases).
-Commands are associated with a commandUUID, this UUID allows the player to access the result of their command after it has been executed
+
+* Commands are associated with a commandUUID, this UUID allows the player to access the result of their command after it has been executed

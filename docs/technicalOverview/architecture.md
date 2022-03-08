@@ -46,6 +46,8 @@ The `Robots` are like the extendet arm of the `Player`.
 
 ## Map
 
+Map Map manages the gameworld and is responsible for generating and linking planets and their resources.
+
 ## GameLog
 
 This service tracks the progress of the `Players` and the `Game`.
@@ -54,12 +56,11 @@ This service tracks the progress of the `Players` and the `Game`.
 
 * On the other hand it serves as a leaderboard, which displays the `Players` progress throug points and achivements
 
-:::danger TODO
-Notes to Services
+## Links to Repositories
 
-Map Map manages the gameworld and is responsible for generating and linking planets and their resources.
-Robot Robot is the largest service, because it manages and controls all features triggered by robots. This includes, for example, minig rates, life points, attack values, inventory, etc.
-Trading The Trading service manages a playerâ€™s money. All transactions, i.e. buying and selling resources, upgrades, etc. are managed by Trading.
-Game The game service provides the interface between players and other services. It takes care of the registration and authorization of players, the order of commands and the round time.
-Gamelog The Gamelog service is responsible for the game results. Gamelog listens to all the information in the entire network and thus tries to build a complete version of the events.
-:::
+[Robot](/rules/trading)
+[Game](/rules/trading)
+[Trading](/rules/trading)
+[Gamelog](/rules/trading)
+[Map](/rules/trading)
+[Sceleton Player](/rules/trading)
