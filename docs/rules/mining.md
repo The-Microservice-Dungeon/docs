@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 4
 ---
 
 # Mining Resources
@@ -11,13 +11,13 @@ Each resource can be mined by robots and later [sold for moneten 💸](/rules/tr
 
 There are five different kinds of mineable resources
 
-| Resource | Cost | Rarity |
-| -------- | ---- | ------ |
-| Coal     | 5    | 16     |
-| Iron     | 15   | 7      |
-| Gem      | 30   | 3      |
-| Gold     | 50   | 2      |
-| Platin   | 60   | 1      |
+|Value | Name | Price
+|---|---|---|
+|COAL | Coal | 5
+|IRON | Iron  | 15
+|GEM | Gem | 30
+|GOLD | Gold  | 50
+|PLATIN | Platin | 60
 
 After every mining of a resource field the player which has mined said room gets notified of the remaining amount of resources.
 
@@ -25,6 +25,6 @@ Resources can be depleted.
 
 Upon depletion a new resource spawns at a random location on the map.
 
-If a Robot mines with a full Inventory, all mined resources are lost to space.
+If a robot mines with a full Inventory, all mined resources are lost to space.
 
-Multiple robots can mine at the same room, with no Upper limit.
+Multiple robots can mine at the same room and the same resource spot, with no upper limit.

@@ -25,6 +25,8 @@ Hiding the result behind a command uuid will obfuscate the information but resul
 * robot service: processes the command, determines a random planet and throws events according to the result
 * map service: provides a list of all planets
 
+(https://github.com/The-Microservice-Dungeon/robot/tree/main/src/main/kotlin/com/msd/item/domain)
+
 ### Fighting item
 
 The received item type determines if a robot uuid or a planet uuid is expected. E.g. robot uuid for the targeted rocket and planet uuid for the nuke.
@@ -74,13 +76,19 @@ Upgrade Status: robot receives the data from trading if upgrades are bought, sto
 
 ## Robot and its data
 
+(https://github.com/The-Microservice-Dungeon/robot/blob/main/src/main/kotlin/com/msd/robot/application/RobotController.kt)
+
 The API provides GET for all attributes of a robot:
+
+* (https://github.com/The-Microservice-Dungeon/robot/blob/main/src/main/kotlin/com/msd/robot/domain/Robot.kt)
 
 * general: id, player, planet, alive
 * max stats of robot according to current upgrade status: maxHealth, maxEnergy, energyRegen, attackDamage, miningSpeed
 * current status of the robot: health, energy
 * current upgrade level: healthLevel, damageLevel, miningSpeedLevel, miningLevel, energyLevel, energyRegenLevel, storageLevel
-* object “inventory” with attributes: maxStorage, usedStorage, storedCoal, storedIron, storedGem, storedGold, storedPlatin
+
+* object “inventory” with attributes: maxStorage, usedStorage, storedCoal, storedIron, storedGem, storedGold, storedPlatin (https://github.com/The-Microservice-Dungeon/robot/blob/main/src/main/kotlin/com/msd/robot/domain/Inventory.kt)
+
 
 ### POST a robot
 
@@ -109,8 +117,13 @@ Expected properties are:
 
 ## Commands
 
+* (https://github.com/The-Microservice-Dungeon/robot/blob/main/src/main/kotlin/com/msd/command/application/CommandApplicationService.kt)
+* (https://github.com/The-Microservice-Dungeon/robot/blob/main/src/main/kotlin/com/msd/command/application/CommandController.kt)
+* (https://github.com/The-Microservice-Dungeon/robot/blob/main/src/main/kotlin/com/msd/robot/application/RobotApplicationService.kt)
+
 The path “/commands” is a endpoint to receive commands which are no specific API calls. These are all commands which the player issues to the game service which then will be forwarded to us together with a transaction id. They are received as a batch consisting of all commands of a phase.
-Valid commands are:
+
+### Valid commands are
 
     block
     move
