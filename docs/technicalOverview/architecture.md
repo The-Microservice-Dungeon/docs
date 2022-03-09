@@ -58,9 +58,9 @@ This service tracks the progress of the `Players` and the `Game`.
 
 ## Links to Repositories
 
-[Robot](/rules/trading)
-[Game](/rules/trading)
-[Trading](/rules/trading)
-[Gamelog](/rules/trading)
-[Map](/rules/trading)
-[Sceleton Player](/rules/trading)
+1. [Robot](https://github.com/The-Microservice-Dungeon/robot)
+2. [Game](https://github.com/The-Microservice-Dungeon/game)
+3. [Trading](https://github.com/The-Microservice-Dungeon/trading)
+4. [Gamelog](https://github.com/The-Microservice-Dungeon/gamelog)
+5. [Map](https://github.com/The-Microservice-Dungeon/map)
+6. [Sceleton Player](https://github.com/The-Microservice-Dungeon/generic-player) (You can use this to get a head start in player development)

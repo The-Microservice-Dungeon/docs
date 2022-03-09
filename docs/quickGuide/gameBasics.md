@@ -8,7 +8,9 @@ When installation is complete, "Game Service" is initialy online and running.
 
 :::danger Take care
 
-There is some preparation needed, before it is posible to play.
+There is some preparation needed, before it is possible to play.
+
+In the API documentation you will find, that it says you need an **BearerAuth (admin)**. You can ignore this information. **It is obsolet**.  
 
 :::
 
@@ -81,6 +83,51 @@ Imput has to be given in **MILLISECONDS(1000ms = 1s)**.
 Please refer to the Chapter [Player Basics](https://the-microservice-dungeon.github.io/docs/quickGuide/howToBuildAPlayer)
 
 ## 3. Start Game(play)
+
+The start of a game is simple. Just use this REST Call
+
+        http://{defaultHost}/games/{gameId}/gameCommands/start
+
+You can controll if a game is running with the REST calls:
+
+        http://{defaultHost}/games
+
+>**example payload**
+
+    [
+
+    {
+
+        "gameId": "d290f1ee-6c54-4b01-90e6-d701748f0851",
+        "gameStatus": "running",
+        "maxPlayers": 6,
+        "maxRounds": 58,
+        "currentRoundNumber": 0,
+        "roundLengthInMillis": 60000,
+        "participatingPlayers": 
+
+            [
+                "d290f1ee-6c54-4b01-90e6-d701748f0851"
+            ]
+        }
+
+    ]
+
+* **"gameStatus": "running"** will signalise you that a game is running.
+
+Or you could look if the time is changed with this REST Call.
+
+        http://{defaultHost}/games/{gameId}/time
+
+>**example payload**
+
+        {
+
+            "gameTime": 183,
+            "roundCount": 4,
+            "roundTime": 33
+
+        }
 
 ## 4. Player issues Commandes
 

@@ -6,16 +6,20 @@ sidebar_position: 3
 
 ## What do I need to know to build a Player
 
-steps neseccery
+Following steps are neseccery to participate the game
 
-register player to game service
+You could skip step one and two by using the sceleton player blueprint.
 
-join player to game
+1. the player has to be known to the game service:
 
-buy first robot
+    register player to game service
 
-move robot north
+2. join player to game
 
-step x
+3. buy first robot
 
-win the game
+4. move robot to another planet
+
+5. step x
+
+6. win the game
