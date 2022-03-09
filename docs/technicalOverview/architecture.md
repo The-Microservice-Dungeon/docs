@@ -8,7 +8,7 @@ The-Microservice-Dungeon is a microservice architecture project.
 
 We have build several microservices, which are communicating with each other.
 
-<!--- ![Overview](/static/img/game_flow.png) --->
+![Overview](//img/gameflow.png)
 
 This picture is a great starting point to understand how The-Microservice-Dungeon is working.
 

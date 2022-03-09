@@ -90,6 +90,8 @@ The start of a game is simple. Just use this REST Call
 
 You can controll if a game is running with the REST calls:
 
+>**GET**
+
         http://{defaultHost}/games
 
 >**example payload**
@@ -116,6 +118,8 @@ You can controll if a game is running with the REST calls:
 * **"gameStatus": "running"** will signalise you that a game is running.
 
 Or you could look if the time is changed with this REST Call.
+
+>**GET**
 
         http://{defaultHost}/games/{gameId}/time
 

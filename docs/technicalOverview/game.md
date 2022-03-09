@@ -52,7 +52,7 @@ The original gameloop was changed from 1. Blocking -> 2. Trading -> 3. Moving ->
 
 ## Notes to Gameplay
 
-* Chosen option: Generic command entity owned by Game, payload owned by services to whom command is routed. 
+* Chosen option: Generic command entity owned by Game, payload owned by services to whom command is routed.
 
 * Game Service receives commands from the players and is responsible for sorting them by their execution phase
 
