@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-# Robot Service
+# Robot Service Technical View
 
 ## Blocking sequence
 

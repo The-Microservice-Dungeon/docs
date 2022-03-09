@@ -322,7 +322,7 @@ With one of the `planetId` you schould have a destination for your move robot co
 Here you could also get a neighbours planet for your move command ;).
 
 Now your player should issue a REST Call to the Game Service.
-Bewere now you have to fill in `robotId`, and `plnaetId`
+Bewere now you have to fill in `robotId`, and `planetId` here it is not clear, if `planetId` or `targetId` or both are reciving the planet uuid. Please test it out.
 
 >**POST**
 
@@ -358,12 +358,12 @@ ___
 
 ## What's next?
 
-What is the gameloop?
+What is the [gameloop](/rules/gameloop.md)?
 
-How does the world look like?
+How does the [world/map](/rules/dungeon.md) look like?
 
-What schould i know about commands?
+What schould i know about [commands](/rules/game.md)?
 
-What can I do with my robot?
+What can I do with my [robot](/rules/robot.md)?
 
-Waht is the economy?
+What is the [economy](/rules/tradingService.md)?

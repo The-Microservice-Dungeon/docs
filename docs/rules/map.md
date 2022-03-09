@@ -2,7 +2,7 @@
 sidebar_position: 9
 ---
 
-# Map Service
+# Map Service Technical View
 
 ## Gameworld Creation
 

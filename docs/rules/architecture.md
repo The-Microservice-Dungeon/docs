@@ -8,7 +8,7 @@ The-Microservice-Dungeon is a microservice architecture project.
 
 We have build several microservices, which are communicating with each other.
 
-![Overview](//img/gameflow.png)
+![Overview](/img/gameflow.png)
 
 This picture is a great starting point to understand how The-Microservice-Dungeon is working.
 
@@ -46,7 +46,7 @@ The `Robots` are like the extendet arm of the `Player`.
 
 ## Map
 
-Map Map manages the gameworld and is responsible for generating and linking planets and their resources.
+Map manages the gameworld and is responsible for generating and linking planets and their resources.
 
 ## GameLog
 
@@ -63,4 +63,4 @@ This service tracks the progress of the `Players` and the `Game`.
 3. [Trading](https://github.com/The-Microservice-Dungeon/trading)
 4. [Gamelog](https://github.com/The-Microservice-Dungeon/gamelog)
 5. [Map](https://github.com/The-Microservice-Dungeon/map)
-6. [Sceleton Player](https://github.com/The-Microservice-Dungeon/generic-player) (You can use this to get a head start in player development)
+6. [Skeleton Player](https://github.com/The-Microservice-Dungeon/generic-player) (You can use this to get a head start in player development)

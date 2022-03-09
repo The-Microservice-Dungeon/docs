@@ -2,7 +2,7 @@
 sidebar_position: 8
 ---
 
-# Gamelog Service
+# Gamelog Service Technical View
 
 There are multiple scoreboards:
 

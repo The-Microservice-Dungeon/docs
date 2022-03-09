@@ -19,9 +19,11 @@ How do I run a The-Microservice-Dungeon Game?
 
 What do I need to know to build a basic Player that interacts with The-Microservice-Dungeon Game.
 
+___
+
 ## What's next?
 
-What is the [gameloop](/rules/gameloop.md)?
+What is the [gameloop](/rules/game.md)?
 
 How does the [world/map](/rules/dungeon.md) look like?
 

@@ -1,8 +1,8 @@
 ---
-sidebar_position: 11
+sidebar_position: 5
 ---
 
-# Trading Service
+# Trading Service Technical View
 
 ## Price Econonmy
 

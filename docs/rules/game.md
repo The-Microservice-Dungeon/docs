@@ -2,7 +2,7 @@
 sidebar_position: 7
 ---
 
-# Game Service
+# Game Service Technical View
 
 ## Commands
 
