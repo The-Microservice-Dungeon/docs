@@ -21,12 +21,12 @@ What do I need to know to build a basic Player that interacts with The-Microserv
 
 ## What's next?
 
-What is the gameloop?
+What is the [gameloop](/rules/gameloop.md)?
 
-How does the world look like?
+How does the [world/map](/rules/dungeon.md) look like?
 
-What schould i know about commands?
+What schould i know about [commands](/rules/game.md)?
 
-What can I do with my robot?
+What can I do with my [robot](/rules/robot.md)?
 
-What is the economy?
+What is the [economy](/rules/tradingService.md)?
