@@ -8,11 +8,12 @@ sidebar_position: 3
 
 :::info
 
-If you are using the sceleton player as an entrypoint you can jump to step 3
+If you are using the sceleton player as an entrypoint you can jump to step 3.
+But for a better understanding I employ you to read all steps.
 
 :::
 
-Following steps are neseccery to participate the game
+Following steps are neseccery to in participate the game
 
 ### 1. The player has to be known to the Game Service
 
@@ -124,7 +125,7 @@ and a **payload**:
 
 Your player schould have saved the gameId at some point, propably best before joining a game. By for example comparing the gameId to theallready saved one, you could be certain that the game you joined started and not another one.
 
-Secondly this could activate the consumer for the `round events`. We learnd a round has an *command collection phase* and a *command execution phase*. 
+Secondly this could activate the consumer for the `round events`. We learnd a round has an *command collection phase* and a *command execution phase*.
 
 When a *command collection phase* starts there will be such an event in the channel `roundStatus`
 
@@ -320,7 +321,6 @@ With one of the `planetId` you schould have a destination for your move robot co
 
 Here you could also get a neighbours planet for your move command ;).
 
-
 Now your player should issue a REST Call to the Game Service.
 Bewere now you have to fill in `robotId`, and `plnaetId`
 
@@ -354,7 +354,6 @@ With that you schould again have recived an `trasactionId`, that will help you t
 
 From here on out you are on your one. You get a gold star.
 
-
 ___
 
 ## What's next?
@@ -368,4 +367,3 @@ What schould i know about commands?
 What can I do with my robot?
 
 Waht is the economy?
-

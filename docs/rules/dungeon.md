@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 # Dungeon Map and Movement
@@ -54,7 +54,6 @@ There are different types of gravity on each planet, where it get's more difficu
 > As an example: Moving from an easy gravity planet to a neighbouring medium gravity planet costs 1 energy.
 
 ### Movement Command
-
 
     {
     "gameId": "d290f1ee-6c54-4b01-90e6-d701748f0851",

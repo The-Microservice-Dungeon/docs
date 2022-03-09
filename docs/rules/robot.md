@@ -89,7 +89,6 @@ The API provides GET for all attributes of a robot:
 
 * object “inventory” with attributes: maxStorage, usedStorage, storedCoal, storedIron, storedGem, storedGold, storedPlatin (https://github.com/The-Microservice-Dungeon/robot/blob/main/src/main/kotlin/com/msd/robot/domain/Inventory.kt)
 
-
 ### POST a robot
 
 This is responsible for spawning a new robot. It should only be used by the trading service.

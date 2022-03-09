@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 7
 ---
 
 # Game Service
@@ -26,7 +26,6 @@ The players recieves an id, to find the right event, that informs him of the out
 * Phase: Command Input started
 * Phase: Command Input ended
 * Phase: Command execution started
-
 
 * Command execution Phase: Blocking started
 * Command execution Phase: Blocking ended
