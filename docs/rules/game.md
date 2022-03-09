@@ -4,17 +4,13 @@ sidebar_position: 7
 
 # Game Service Technical View
 
-## Commands
 
-The game service must manage the commands from the player, because it owns the information about the round timer and can send the commands at the right time to the right services.
+## Gameloop
 
-It ownes a list of all robots, to verify, that players dont sent commands for robots of other players.
+Items are handled seperantly, to make it easier forthe other services.
+The original gameloop was changed from 1. Blocking -> 2. Trading -> 3. Moving -> 4. Fighting -> 5. Mining -> 6. Scouting to
 
-The list is created by the information of the robot-create-events, so the service knows all the robots, that are owned by the players.
-
-The commands from the players are stored in the game service and are sent to the other services, that fit the command-type during the execution phase.
-
-The players recieves an id, to find the right event, that informs him of the outcome of his command.
+    1. Blocking -> 2. Trading -> 3. Moving (with an item) -> 4.Moving (without an item) -> 5. Repairing -> 6. Battleing (with an item) -> 7. Battleing(without an item) -> 8. Mining -> 9. Regenerating
 
 ## Round Flow Events
 
@@ -42,12 +38,17 @@ The players recieves an id, to find the right event, that informs him of the out
 
 * Game ended
 
-## Gameloop
+## Commands
 
-Items are handled seperantly, to make it easier forthe other services.
-The original gameloop was changed from 1. Blocking -> 2. Trading -> 3. Moving -> 4. Fighting -> 5. Mining -> 6. Scouting to
+The game service must manage the commands from the player, because it owns the information about the round timer and can send the commands at the right time to the right services.
 
-    1. Blocking -> 2. Trading -> 3. Moving (with an item) -> 4.Moving (without an item) -> 5. Repairing -> 6. Battleing (with an item) -> 7. Battleing(without an item) -> 8. Mining -> 9. Regenerating
+It ownes a list of all robots, to verify, that players dont sent commands for robots of other players.
+
+The list is created by the information of the robot-create-events, so the service knows all the robots, that are owned by the players.
+
+The commands from the players are stored in the game service and are sent to the other services, that fit the command-type during the execution phase.
+
+The players recieves an id, to find the right event, that informs him of the outcome of his command.
 
 ## Notes to Gameplay
 

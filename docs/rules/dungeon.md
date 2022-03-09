@@ -2,9 +2,9 @@
 sidebar_position: 2
 ---
 
-# Gameworld and Gameplay 
+# Gameworld and Gameplay
 
-## Dungeon Map and Movement
+## Dungeon Map
 
 The map represents the gameworld and is one of the central services in our microservice dungeon game.
 
@@ -29,7 +29,7 @@ You can only see the contents of the planet you are currently in.
 ### Mining Resources
 
 Resources are a central part of the microservice dungeon. It brings economical value into the gameplay.
-Each resource can be mined by robots and later [sold for moneten 💸](/rules/trading)
+Each resource can be mined by robots and later sold for moneten 💸.
 
 #### Mineable Resources
 
@@ -73,11 +73,11 @@ When buying a new Robot it will spawn on a random spacestation.
 
 Each Robot can hold an unlimited amount of Special Items.
 
-For a technical overview please refer to [Trading](/docs/rules/tradingservice.md)
+For a technical overview please refer to [Trading](/rules/tradingService.md)
 
 Buying robots can be done globally. It will then spawn on random spacestation.
 
-### Movement
+## Movement
 
 Each ship can only move one room each turn (some special items like "wormhole" cause exeptions).
 
@@ -91,7 +91,7 @@ There are different types of gravity on each planet, where it get's more difficu
 
 > As an example: Moving from an easy gravity planet to a neighbouring medium gravity planet costs 1 energy.
 
-### Fighting
+## Fighting
 
 As soon as you enter another planet with your robot, you get the information of how many other robots are on that planet.
 
@@ -108,7 +108,7 @@ In battle following rules apply
 
 - If there is not enouth space anywhere to carry the dropped resources they will be lost to space
 
-### Blocking
+## Blocking
 
 You can build barricades to stop other players from leaving the room.
 
@@ -117,7 +117,7 @@ You can build barricades to stop other players from leaving the room.
 - blocking has to be renwed every round making it impossible for a Robot to do anything else while blockading, as it counts as an `Action`
 - If a player tries to move through a blockade, it would still costs the energy that the `move` would have used. The Player would recive the event move unsuccsesfull.
 
-### Gameloop
+## Gameloop
 
 Each robot's action whether it is blocking, trading, moving, fighting or mining will be executed at the end of the corresponding phase of each round. **A robot can only execute one action per round.**
 A basic single round is 60 seconds, with the first 45 seconds for command collection, in wich the players can send commands to their robots and 15 seconds for the command executions. The [game service](/rules/game.md) is the orchestrator of the game rythem.
@@ -133,7 +133,6 @@ Actions of the same phase will be batched together and executed simultaniusly fo
 7. Battleing(without an item)
 8. Mining
 9. Regenerating
-
 
 ### Movement Command
 
