@@ -12,6 +12,16 @@ We have build several microservices, which are communicating with each other.
 
 This picture is a great starting point to understand how The-Microservice-Dungeon is working.
 
+## Communication
+
+:::danger
+
+work in progress
+
+The comunication is partly synchronous REST calls between services, partly asynchronous Kafka Events. Please refer to the "X Service Technical View" for a more complete overview.
+
+::
+
 ## Game
 
 This service is the orchestrater of the project.
@@ -65,6 +75,8 @@ This service tracks the progress of the `Players` and the `Game`.
 * On one hand it works as a log service for the `Game` and protocols the commands.
 
 * On the other hand it serves as a leaderboard, which displays the `Players` progress throug points and achivements
+
+
 
 ## Links to Repositories
 

@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Gameworld and Gameplay
+# Gameworld and Gameplay Guide
 
 ## Dungeon Map
 
