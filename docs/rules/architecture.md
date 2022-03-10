@@ -20,7 +20,7 @@ work in progress
 
 The comunication is partly synchronous REST calls between services, partly asynchronous Kafka Events. Please refer to the "X Service Technical View" for a more complete overview.
 
-::
+:::
 
 ## Game
 
