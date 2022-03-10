@@ -366,7 +366,7 @@ work in progress
 
 :::
 
-What is the [gameloop](/rules/gameloop.md)?
+What is the gameloop?
 
 How does the [world/map](/rules/dungeon.md) look like?
 

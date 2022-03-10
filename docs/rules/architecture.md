@@ -76,8 +76,6 @@ This service tracks the progress of the `Players` and the `Game`.
 
 * On the other hand it serves as a leaderboard, which displays the `Players` progress throug points and achivements
 
-
-
 ## Links to Repositories
 
 1. [Robot](https://github.com/The-Microservice-Dungeon/robot)
