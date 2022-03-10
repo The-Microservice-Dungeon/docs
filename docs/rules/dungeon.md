@@ -42,7 +42,7 @@ There are five different kinds of mineable resources
 |GOLD | Gold  | 50
 |PLATIN | Platin | 60
 
-After every mining of a resource field the player which has mined said room gets notified of the remaining amount of resources.
+After every mining of a resource field the player which has mined said planet gets notified of the remaining amount of resources.
 
 Resources-"patches" on a planet can be depleted.
 
@@ -50,11 +50,12 @@ Upon depletion a new resource spawns at a random location on the map.
 
 If a robot mines with a full Inventory, all mined resources are lost to space.
 
-Multiple robots can mine at the same room and the same resource spot, with no upper limit.
+Multiple robots can mine at the same planet and the same resource spot, with no upper limit.
 
 ### Spacestations and Trading
 
 Spacestations are a special type of planet, which can be seen as trading and spawn posts. You can also sell resources for moneten and buy several upgrades.
+There is also a simulated economy, so all prices change in the course of the game.
 
 **You can buy:**
 
@@ -75,9 +76,24 @@ Each Robot can hold an unlimited amount of Special Items.
 
 For a technical overview and all possible trading transactions please refer to [Trading](/rules/tradingService.md)
 
+## Robots
+
+The player interacts with the whole The Microservice Dungeon through robots. Your player is sending commands to the game service, which is relaying these commands to the robot. Following these commands the Robot can move around, fight stuff, mine resources, and much more.
+
+A robot has a pool of HP, that you need to survice attacks and a pool of energiy, that is used to perform all actions.
+
+The robots have an unlimited inventary, where special items can be stored.
+Additionaly the robots have a second limited inventory, where mined ressources are stored.
+
+Each robot can perform up to **one** action per game round!
+Your most current command to a robot is overwriting every predating command.
+
+Lastly the every robot has severel stats that can individualy be upgradet by buying upgrades from spacestation. These Stats are for example size of energy pool or attack power or mining speed etc.
+By using these upgrades you can either specialize your robots or have an army of of low level "zombies".
+
 ## Movement
 
-Each ship can only move one room each turn (some special items like "wormhole" cause exeptions).
+Each robot can only move one planet each turn (some special items like "wormhole" cause exeptions).
 
 There are different types of gravity on each planet, where it get's more difficult to moving through these planets.
 
@@ -101,17 +117,17 @@ In battle following rules apply
 
 - **First all damage Dealt gets calculated**, then all damage recieved. That means even when you get destroyed you will still have dealt damage that turn.
 
-- When a Robot is destroyed all its resources are equally divided between all other ships in that room
-- If a ship has full cargo and can not carry it´s share of resources they will again be distributed among the remaining ships wiht free cargo space
+- When a Robot is destroyed all its resources are equally divided between all other robots in that planet
+- If a robot has full cargo and can not carry it´s share of resources they will again be distributed among the remaining robots wiht free cargo space
 
 - If there is not enouth space anywhere to carry the dropped resources they will be lost to space
 
 ## Blocking
 
-You can build barricades to stop other players from leaving the room.
+You can build barricades to stop other players from leaving the planet.
 
 - Blockading costs 2 Energy + 10% of max energy capacity for every round the blockade is uphold
-- during a blockade robot can enter the room but not leave it
+- during a blockade robot can enter the planet but not leave it
 - blocking has to be renwed every round making it impossible for a Robot to do anything else while blockading, as it counts as an `Action`
 - If a player tries to move through a blockade, it would still costs the energy that the `move` would have used. The Player would recive the event move unsuccsesfull.
 
