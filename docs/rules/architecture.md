@@ -16,11 +16,13 @@ This picture is a great starting point to understand how The-Microservice-Dungeo
 
 This service is the orchestrater of the project.
 
-* `Players` can join the `Game`.
+* `Players` regestiers with the Game Service.
+
+* `Players` can join a `Game`.
 
 * When a `Game` is started, it orchastrates the timing on the base of which the other services are communicating.
 
-* `Players` are sending Commands to the `Game`. These Commands are collected for the specific round and forewarded to the recivieng microsercie. E.g. ich a `player` wants a `Robot` to move, the `Robot` recevies the command
+* `Players` are sending Commands to the `Game`. These Commands are collected for the specific round and forewarded to the recivieng microsercie. E.g. if a `player` wants a `Robot` to move, the `Robot` recevies the command
 
 ## Player
 
@@ -36,7 +38,7 @@ The `Robots` are like the extendet arm of the `Player`.
 
 `Trading` is used in three different ways
 
-* First it acts as a bank depot for the `Players`, and controlls if the `Players` has enough [moneten 💸](/rules/trading) for a purchase.
+* First it acts as a bank depot for the `Players`, and controlls if the `Players` has enough moneten 💸 for a purchase.
 
 * Second it can generate Robots after an Issues "buy robot" command of the `Player`.
 
