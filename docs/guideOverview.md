@@ -23,6 +23,14 @@ ___
 
 ## What's next?
 
+For a more detailed view, you schould propably look at these things next.
+
+:::warning
+
+work in progress
+
+:::
+
 What is the [gameloop](/rules/game.md)?
 
 How does the [world/map](/rules/dungeon.md) look like?

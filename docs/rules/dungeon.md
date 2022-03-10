@@ -16,20 +16,19 @@ It consists of several planets, connected with other neighbouring planets.
 
 Our dungeon consists of planets, where each planet has an `UUID` and is directly connected to its neighbouring planets.
 
-As player you only know the existence of the planets you have been in and which are neighbours to your robots current planet.
+As player you only know the existence of the planets you have been in and which are neighbours these planets. You discover a planet and its neighbours by moving a robot onto this planet. (There is no fog of war, ich you wanted to you could monitor the movement of all robots, not only your own and generate a map from that information. Please don't do this.)
 
 A robot can only move to a neighbouring planet. (Exception granted for special items.)
 
 There can be several robots one a planet, with no upper limit.
 
 You can only see the contents of the planet you are currently in.
-
-(The contents of a Planet are revealed, when a robot enters the Planet. By listening to all robots you could potentioly get updates to all entered Planets. *Do not do it, this is not fair gameplay*)
+The contents of a Planet are revealed, when a robot enters the Planet. ( Aganin by listening to all robots you could potentioly get updates to all entered Planets. *Do not do it, this is not fair gameplay*)
 
 ### Mining Resources
 
 Resources are a central part of the microservice dungeon. It brings economical value into the gameplay.
-Each resource can be mined by robots and later sold for moneten 💸.
+Each resource can be mined by robots and later sold for moneten 💸. Mining speed and such is determend by your robots upgrade level.
 
 #### Mineable Resources
 
@@ -45,7 +44,7 @@ There are five different kinds of mineable resources
 
 After every mining of a resource field the player which has mined said room gets notified of the remaining amount of resources.
 
-Resources can be depleted.
+Resources-"patches" on a planet can be depleted.
 
 Upon depletion a new resource spawns at a random location on the map.
 
@@ -69,13 +68,12 @@ The costs for HP Restoration depends on the Level of that Robots Max HP independ
 
 You can only repair a robot to max HP.
 
+Buying robots can be done globally. It will then spawn on random spacestation.
 When buying a new Robot it will spawn on a random spacestation.
 
 Each Robot can hold an unlimited amount of Special Items.
 
-For a technical overview please refer to [Trading](/rules/tradingService.md)
-
-Buying robots can be done globally. It will then spawn on random spacestation.
+For a technical overview and all possible trading transactions please refer to [Trading](/rules/tradingService.md)
 
 ## Movement
 
@@ -89,11 +87,11 @@ There are different types of gravity on each planet, where it get's more difficu
 | Medium  | 2            |
 | Hard    | 3            |
 
-> As an example: Moving from an easy gravity planet to a neighbouring medium gravity planet costs 1 energy.
+> As an example: Moving from an easy gravity planet to a neighbouring medium gravity planet costs 1 energy. The startpoint not target the energy costs.
 
 ## Fighting
 
-As soon as you enter another planet with your robot, you get the information of how many other robots are on that planet.
+As soon as you enter another planet with your robot, you get the information of how many other robots are on that planet. If you stay on a planet, you dont get information about other robots leaving the planet
 
 Here you can choose whether you want to engange in a fight with that player or choose to be peaceful.
 
@@ -120,7 +118,7 @@ You can build barricades to stop other players from leaving the room.
 ## Gameloop
 
 Each robot's action whether it is blocking, trading, moving, fighting or mining will be executed at the end of the corresponding phase of each round. **A robot can only execute one action per round.**
-A basic single round is 60 seconds, with the first 45 seconds for command collection, in wich the players can send commands to their robots and 15 seconds for the command executions. The [game service](/rules/game.md) is the orchestrator of the game rythem.
+A basic single round is 60 seconds, with the first 45 seconds for command collection, in wich the players can send commands to their robots and 15 seconds for the command executions. The [game service](/rules/game.md) is the orchestrator of the game rythem. The actual duration of the round lenght can be changed, but there is always a fix 3/4 of a round command collection time and 1/4 command execution time.
 
 Actions of the same phase will be batched together and executed simultaniusly for all robots in a phase in the following sequence order:
 
@@ -134,19 +132,8 @@ Actions of the same phase will be batched together and executed simultaniusly fo
 8. Mining
 9. Regenerating
 
-### Movement Command
+- Repairing means buying a repair at a space station.
 
-    {
-    "gameId": "d290f1ee-6c54-4b01-90e6-d701748f0851",
-    "playerToken": "d290f1ee-6c54-4b01-90e6-d701748f0851",
-    "robotId": "d290f1ee-6c54-4b01-90e6-d701748f0851",
-    "commandType": "move",
-    "commandObject": 
-        {
-        "commandType": "move",
-        "planetId": "d290f1ee-6c54-4b01-90e6-d701748f0851",
-        "targetId": "d290f1ee-6c54-4b01-90e6-d701748f0851",
-        "itemName": "",
-        "itemQuantity": ""
-        }
-    }
+- Battleing (with an item) is executed before Battleing(without an item) so you could destroy someone who is attacking you with an item and in that case you don't suffer damage to your robot.
+
+- Regenerating: Robots have a limited energy pool, which is used for all actions. They can regenerate a part of their energy by using the action `regenerate`. This action does not require energy.

@@ -44,9 +44,17 @@ The `Robots` are like the extendet arm of the `Player`.
 
 * Forth `Players` upgrade their `Robots` by buing upgrades or single use Items with the "buy" command
 
-## Map
+## Map Service
 
-Map manages the gameworld and is responsible for generating and linking planets and their resources.
+* The Map service manages the gameworld(map) and is responsible for generating and linking planets and their resources.
+
+* Planets can be spacestations, whrere trading is posible.
+
+* A minable ressource is located on a planet.
+
+* The `Robots` are moving across the planets.
+
+* The information about neighbouring Planets is providet by the `Map`
 
 ## GameLog
 
