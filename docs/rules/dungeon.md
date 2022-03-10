@@ -91,7 +91,7 @@ Your most current command to a robot is overwriting every predating command.
 Lastly the every robot has severel stats that can individualy be upgradet by buying upgrades from spacestation. These Stats are for example size of energy pool or attack power or mining speed etc.
 By using these upgrades you can either specialize your robots or have an army of of low level "zombies".
 
-## Movement
+### Movement
 
 Each robot can only move one planet each turn (some special items like "wormhole" cause exeptions).
 
@@ -105,7 +105,7 @@ There are different types of gravity on each planet, where it get's more difficu
 
 > As an example: Moving from an easy gravity planet to a neighbouring medium gravity planet costs 1 energy. The startpoint not target the energy costs.
 
-## Fighting
+### Fighting
 
 As soon as you enter another planet with your robot, you get the information of how many other robots are on that planet. If you stay on a planet, you dont get information about other robots leaving the planet
 
@@ -122,7 +122,7 @@ In battle following rules apply
 
 - If there is not enouth space anywhere to carry the dropped resources they will be lost to space
 
-## Blocking
+### Blocking
 
 You can build barricades to stop other players from leaving the planet.
 
