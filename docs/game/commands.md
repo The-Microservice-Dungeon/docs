@@ -16,7 +16,7 @@ The players recieves an id, to find the right event, that informs him of the out
 
 How does a command look like?
 
-**example:**
+>**example:**
 
     {
 
@@ -62,7 +62,7 @@ More information on the sequence of these commands you can find further down in 
 
 By seperating the wrapper from the object, the game service does not need to know about the contents of a command.
 
-**the object:**
+>**the object:**
 
         {
             "commandType": "blocking",
@@ -76,7 +76,7 @@ One thing to consider is that `planetId` or `targetId` is chosen depending on th
 
 The response is always a `transactionId` with which by listening to the rigt service you can recive the coresponding resolution of your command as an event.
 
-**response example**
+>**response example**
 
     {
         "transactionId": "d290f1ee-6c54-4b01-90e6-d701748f0851"

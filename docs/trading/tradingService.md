@@ -119,7 +119,7 @@ Channel: **trades**
 
 There are four kinds of `headers`:
 
-**buy-error**
+>**buy-error**
 
     {
     "type": "buy-error",
@@ -128,7 +128,7 @@ There are four kinds of `headers`:
     "timestamp": "2020-01-10T12:00:00Z"
     }
 
-**buy-robot**
+>**buy-robot**
 
     {
     "type": "buy-robot",
@@ -137,7 +137,7 @@ There are four kinds of `headers`:
     "timestamp": "2020-01-10T12:00:00Z"
     }
 
-**buy-item**
+>**buy-item**
 
     {
     "type": "buy-item",
@@ -146,7 +146,7 @@ There are four kinds of `headers`:
     "timestamp": "2020-01-10T12:00:00Z"
     }
 
-**sell-resource**
+>**sell-resource**
 
     {
     "type": "sell-resource",
@@ -157,8 +157,7 @@ There are four kinds of `headers`:
 
 #### Payloads
 
-
-**failed transaction**
+>**failed transaction**
 
     {
     "success": false,
@@ -166,7 +165,7 @@ There are four kinds of `headers`:
     "message": "not enough money",
     "data": null
     }
-**bought-robot**
+>**bought-robot**
 
     {
     "success": true,
@@ -213,7 +212,7 @@ There are four kinds of `headers`:
     ]
     }
 
-**bought item**
+>**bought item**
 
     {
     "success": true,
@@ -298,4 +297,3 @@ Or for a specific round
         }
 
     ]
-

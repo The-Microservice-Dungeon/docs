@@ -66,9 +66,7 @@ If you try to re-register after you already registert first, you will get an err
 
 :::info
 
-
 At any moment the is only one `active` game. An `active` game is either a game that was created and not started yet, or a running game, which was started.
-
 
 All other games will bi in the status `finished`!
 
@@ -131,7 +129,7 @@ Secondly this could activate the consumer for the `round events`. We learnd a ro
 
 When a *command collection phase* starts there will be such an event in the channel `roundStatus`
 
-**header**
+>**header**
 
     {
     "eventId": "5bc9f935-32f1-4d7b-a90c-ff0e6e34125a",
@@ -141,7 +139,7 @@ When a *command collection phase* starts there will be such an event in the chan
     "type": "event-example-uploaded"
     }
 
-**payload**
+>**payload**
 
     {
     "gameId": "5bc9f935-32f1-4d7b-a90c-ff0e6e34125a",
