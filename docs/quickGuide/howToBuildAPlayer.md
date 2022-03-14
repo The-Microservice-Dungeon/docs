@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 # Player Basics
@@ -66,7 +66,9 @@ If you try to re-register after you already registert first, you will get an err
 
 :::info
 
-At any moment the is only one `active` game. An `active` game is either a game that was created and not started yet, or a running game, wich was started.
+
+At any moment the is only one `active` game. An `active` game is either a game that was created and not started yet, or a running game, which was started.
+
 
 All other games will bi in the status `finished`!
 
@@ -178,7 +180,9 @@ After that your player schould issue the following `buy command` via REST call t
 
     }
 
-As a Response you will get a `transactionId`, wich you have to save.
+
+As a Response you will get a `transactionId`, which you have to save.
+
 
 >**example response**
 
@@ -186,7 +190,8 @@ As a Response you will get a `transactionId`, wich you have to save.
     "transactionId": "d290f1ee-6c54-4b01-90e6-d701748f0851"
     }
 
-Why do I need to save the `transactionId`? After the collection of all commands the game service will execute the commands in order of the gameloop. for the execution the gameservice is sending these commands to the executing service, in our case to the trading service. The trading service will execute the command and buy that generate a Robot wich belongs to your player.
+Why do I need to save the `transactionId`? After the collection of all commands the game service will execute the commands in order of the gameloop. for the execution the gameservice is sending these commands to the executing service, in our case to the trading service. The trading service will execute the command and buy that generate a Robot which belongs to your player.
+
 After creating that robot the trading service issues an event. You can filter out that event from the kafka channel `trades` by using the `transactionId` you saved earlier. The playload of that event will include the `robotId` you need to issue a movement command.
 
 >**example header**
@@ -253,7 +258,9 @@ After you saved the *"id": "497f6eca-6276-4993-bfeb-53cbbbba6f08"* for your robo
 In the following round, which you can identify by the above described round started event, you know could move your robot, but where to?
 **The Problem** is you dont realy know where you are and where to move the robot.
 
-Additionaly to a succesfull executed `buy robot event`, you will have to build a consumer for the robot service `neighbours`kafka channel. In the best case you schould be able to consume the event, wich you can identify by your `transactionId`. The payload will tell you the `uuid` for neigboring planets.
+
+Additionaly to a succesfull executed `buy robot event`, you will have to build a consumer for the robot service `neighbours`kafka channel. In the best case you schould be able to consume the event, which you can identify by your `transactionId`. The payload will tell you the `uuid` for neigboring planets.
+
 
 >**example header**
 
@@ -358,20 +365,12 @@ ___
 
 ## What's next?
 
-For a more detailed view, you schould propably look at these things next.
 
-:::warning
+Deep Dive [Commands](/game/commands.md).
 
-work in progress
+How does the [world/map](/dungeon.md) what else do i need to now to play?
 
-:::
+What can I do with my [robot](/robot.md)?
 
-What is the gameloop?
+What is the [economy](/trading/economy.md) and what [items](/trading/tradeables.md) can i buy?
 
-How does the [world/map](/rules/dungeon.md) look like?
-
-What schould i know about [commands](/rules/game.md)?
-
-What can I do with my [robot](/rules/robot.md)?
-
-What is the [economy](/rules/tradingService.md)?

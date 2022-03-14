@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 # Game Basics / Technical Gamecycle
@@ -37,7 +37,9 @@ You should get a `UUID` as a response! If not something went wrong.
         "gameId": "d290f1ee-6c54-4b01-90e6-d701748f0851"
     }
 
-* A "Game" consists of rounds, explained in [Gameloop](https://the-microservice-dungeon.github.io/docs/rules/gameloop). You have to specify the ammount of  rounds that will be played till the automatic end of a game.
+
+* A "Game" consists of rounds, explained in [Gameloop](/game/game.md). You have to specify the ammount of  rounds that will be played till the automatic end of a game.
+
 
 * Also you can specify the ammount of players that will be competing. For a game to start, it is not nessecery to reach the maximum ammount of players. The game mecahnics like mapsize will scale with the actual ammount of players at the **"3. Start Game"**.
 
