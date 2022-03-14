@@ -116,6 +116,7 @@ module.exports = {
             docId: "trading_entry",
             position: "left",
             label: "Trading Service",
+
           },
           {
             label: "Map",
