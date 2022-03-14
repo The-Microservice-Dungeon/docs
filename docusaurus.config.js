@@ -91,7 +91,13 @@ module.exports = {
             type: "doc",
             docId: "intro",
             position: "left",
-            label: "Guide",
+            label: "Project",
+          },
+          {
+            type: "doc",
+            docId: "quickstart_entry",
+            position: "left",
+            label: "Quickstart Guide",
           },
           {
             label: "Map",

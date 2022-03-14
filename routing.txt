@@ -1,0 +1,14 @@
+my-website
+├── docs
+│   └── Project Overview
+│       ├── Gameplay Rules
+│       ├── Miro Board-Domain Diagramm / Scope of Project
+│   └── Quickstart Guide
+│       ├── Installation
+│       ├── "Hello World" Gameplay Basics
+│       ├── "Player MVP"
+│   └── Technical Overview
+│       ├── Domain Diagramms
+│       ├── Sync / Async APIs (with Payloads/Responses etc.) in context of gameflow
+
+
