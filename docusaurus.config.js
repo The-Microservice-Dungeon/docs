@@ -100,6 +100,24 @@ module.exports = {
             label: "Quickstart Guide",
           },
           {
+            type: "doc",
+            docId: "dungeon",
+            position: "left",
+            label: "Gameplay/Map",
+          },
+          {
+            type: "doc",
+            docId: "game_entry",
+            position: "left",
+            label: "Game Service",
+          },
+          {
+            type: "doc",
+            docId: "trading_entry",
+            position: "left",
+            label: "Trading Service",
+          },
+          {
             label: "Map",
             position: "left",
             items: [
