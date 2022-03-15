@@ -48,7 +48,7 @@ The `Robots` are like the extendet arm of the `Player`.
 
 ## Map Service
 
-* The Map service manages the gameworld(map) and is responsible for generating and linking planets and their resources.
+* The Map service manages the gameworld(map) and is responsible for generating and linking planets and generating their resources.
 
 * Planets can be spacestations, whrere trading is posible.
 

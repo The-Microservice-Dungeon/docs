@@ -22,7 +22,7 @@ First step is to create a Game. For that you will use a REST call.
 
         http://{defaultHost}/games
 
->**example payload**
+>**example request payload**
 
     {
         "maxRounds": 58,
@@ -57,7 +57,7 @@ If the game is allready **"running"** and you shorten below the **"currentRoundN
 
         http://{defaultHost}/games/{gameId}/maxRounds
 
->**example payload**
+>**example request payload**
 
     {
     "maxRounds": 0
@@ -74,7 +74,7 @@ Imput has to be given in **MILLISECONDS(1000ms = 1s)**.
 
         http://{defaultHost}/games/{gameId}/duration
 
->**example payload**
+>**example request payload**
 
     {
     "duration": 0
@@ -96,7 +96,7 @@ You can controll if a game is running with the REST calls:
 
         http://{defaultHost}/games
 
->**example payload**
+>**example response payload**
 
     [
 
@@ -125,7 +125,7 @@ Or you could look if the time is changed with this REST Call.
 
         http://{defaultHost}/games/{gameId}/time
 
->**example payload**
+>**example response payload**
 
         {
 
@@ -177,3 +177,7 @@ The response will look like this. Pay attention to the **"gameStatus": "running"
         ]
         }
     ]
+
+## Repository Link Game
+
+[Repository Link Game](https://github.com/The-Microservice-Dungeon/game/tree/main/src/main/kotlin/microservice/dungeon/game/aggregates)

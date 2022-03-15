@@ -1,145 +1,145 @@
 ---
-sidebar_position: 10
+id: map_entry
+sidebar_position: 11
 ---
-
-:::warning
-
-this part is not finished
-
-:::
 
 # Map Service Technical View
 
-## Gameworld Creation
+:::warning
 
-* Create new Gameworld (player_amount round_amount)
-* Get all Gameworlds
-* Get the Gameworld with "status": "active" including the Planets
-* Get a single Planet including planet_type
-* Get a planet’s neighbours
-* Get a planet’s specific neighbour (404 when not found)
-* Turn planet into space station / spawn
-* Get all ResourceTypes
-* Get Resources for a given planet including it’s resource_type
-* Mine resources (of a certain resource_type) from a given planet, for one or several robots (with given transaction IDs) *Actual mined amount is sent via event*
-* Replenish resources (of a certain resource_type) on a given planet *Resource replenishment is sent via event*
-* *Spawn creation is sent via event*
+This part is not completly finished.
 
-## Gameworld
+Here are the most important REST calls and events that are used by other services. Some events are used by the player. these will be marked as **player relevant events**.
 
-POST /gameworlds
+The complete list is here[OpenAPI](/docs/openapi/map) and here[AsyncAPI](/docs/asyncapi/map).
 
-Payload
+:::
 
-{
-  "gameworld": {
-    "player_amount": 100,
-    "round_amount": 1000
+## Service-oriented Functions
+
+### Create Gameworld
+
+Create new Gameworld (size is in correlation to player_amount). This REST call is used by the game service when a new game is created.
+
+>**POST** 
+
+    http://{defaultHost}/gameworlds
+
+>**Payload**
+
+  {
+    "gameworld": {
+      "player_amount": 100,
+      "round_amount": 1000
+    }
   }
-}
 
-GET /gameworlds
+Gameworld creation **response** is sent via event in the channel: **gameworld-created**
 
-[
-   {
-    "id": "19ae9ee7-d790-44cd-b5fc-8d618cf92ed1",
+>**Example Event payload**
+
+  {
+    "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+    "spacestation_ids": [
+      "497f6eca-6276-4993-bfeb-53cbbbba6f08"
+    ],
     "status": "active"
   }
-]
 
-GET /gameworlds/:id
+### Create Spacestation
 
- {
-  "id": "19ae9ee7-d790-44cd-b5fc-8d618cf92ed1",
-  "status": "active",
-  "planets": []
-}
+Automaticly another event, that is saved by the trading service, is produced by the map service. In the channel **spacestation-created** every planetId is published, where you can find a spacestation. This information is used by the trading service to double check the trade commands that can be only placed on space stations and the robot service spawns the new bought robots acording to this information only on space stations.
 
-## Planet
-
-GET /planets/:id
-
- {
-  "id": "e0448835-cc2d-40ad-b452-45bd7b7778b7",
-  "gameworld_id": "19ae9ee7-d790-44cd-b5fc-8d618cf92ed1",
-  "taken_at": "timestamp",
-  "planet_type": "spawn",
-  "neighbours": [],
-  "resources": [],
-  "movement_difficulty": 0,
-  "recharge_multiplicator": 0
-}
-
-GET /planets/:id/neighbours
-
-{
-  "neighbours": [],
-}
-
-GET /planets/:id/neighbours/:neighbour_id
-
-{
-  "neighbour": {
-    "id": "e0448835-cc2d-40ad-b452-45bd7b7778b7",
-    "gameworld_id": "19ae9ee7-d790-44cd-b5fc-8d618cf92ed1",
-    "taken_at": "2021-10-27T09:54:55.814Z",
-    "planet_type": "spawn",
-    "neighbours": [],
-    "resources": [],
-    "movement_difficulty": 0,
-    "recharge_multiplicator": 0
-  }
-}
-
-## Resource Type
-
-GET /resource_types
-
-{
-    "resource_types": []
-}
-
-## Resource
-
-GET /planets/:id/resources
-
-[
-  {
-    "id": "f5b34539-4bcd-4a3d-b6f2-da2c580eae1c",
-    "planet_id": "e0448835-cc2d-40ad-b452-45bd7b7778b7",
-    "resource_type": {
-        "id": "7014e90e-7f52-481e-8685-304898348a18",
-        "name": "iron",
-        "difficulty": 4
-    },
-    "max_amount": 1000,
-    "current_amount": 400
-  }
-]
-
-GET /planets/:id/resources/:resource_id
-
-{
-  "id": "f5b34539-4bcd-4a3d-b6f2-da2c580eae1c",
-  "planet_id": "e0448835-cc2d-40ad-b452-45bd7b7778b7",
-  "resource_type": {
-      "id": "7014e90e-7f52-481e-8685-304898348a18",
-      "name": "iron",
-      "difficulty": 4
-  },
-  "max_amount": 1000,
-  "current_amount": 400
-}
-
-## Minings
-
-POST /planets/:id/minings
-
-Payload
+>**Example Event payload**
 
   {
-  "mining": {
-    "amount_mined": 1000,
-    "resource_type": "iron"
+    "planet_id": "fe9732a9-b905-4934-8835-ed5a93494397"
   }
-}
+
+### Get Planet Information
+
+Get a single Planet including planet_type by id including the neighbours. This REST call the robot service is using for the movement action to get the information for the new planet the robot moved to. It also include the neighbours for the **neighbours event** of the robot.
+
+>**GET**
+
+  http://{defaultHost}/planets/{planet_id}
+
+>**Example Response**
+
+  {
+
+      "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+      "movement_difficulty": 0,
+      "recharge_multiplicator": 0,
+      "gameworld_id": "5bd7c16e-97a9-49f5-974e-307be5fc576d",
+      "planet_type": "default",
+      "neighbours": 
+
+  [
+
+      {
+          "planet_id": "fe9732a9-b905-4934-8835-ed5a93494397",
+          "movement_difficulty": 0,
+          "direction": "north"
+      }
+
+  ],
+  "created_at": "2019-08-24T14:15:22Z",
+  "updated_at": "2019-08-24T14:15:22Z",
+  "resource":
+
+      {
+          "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+          "planet_id": "fe9732a9-b905-4934-8835-ed5a93494397",
+          "max_amount": 0,
+          "current_amount": 0,
+          "created_at": "2019-08-24T14:15:22Z",
+          "updated_at": "2019-08-24T14:15:22Z",
+          "resource_type": "coal"
+      }
+
+  }
+
+### Minings
+
+The robot service is using this REST call to translate a mining command into a mining action. the amount requested is calculated by the robot service on the basis of the robots mining upgrade level.
+
+>**POST**
+
+  http://{defaultHost}/planets/{planet_id}/minings
+
+>**Request Payload**
+
+  {
+      "mining":
+      {
+          "amount_requested": 1
+      }
+  }
+
+## Player Relevant Events
+
+The player schould be listening to two events:
+
+First the result of a mining command to a robot is produced by the map service as anevent in the channel: **resource-mined**. It contains the
+mined resource (of a certain resource_type) from a given planet, for one robots (with given transaction IDs which you can link to your commands), the ctual mined amount and how much of that resource left on that planet.
+
+>**Example Event Payload**
+
+  {
+    "planet_id": "fe9732a9-b905-4934-8835-ed5a93494397",
+    "resource_id": "4d5215ed-38bb-48ed-879a-fdb9ca58522f",
+    "resource_type": "coal",
+    "amount_mined": 0,
+    "amount_left": 0
+  }
+
+Secondly the recources are beeing atomaticly generated by the map service on random plantes. These replenish resources (of a certain resource_type) on a given planet is sent via event. There is no information on how much of a resource has been generated. You can find this in the channel: **resource-replenished**.
+
+>**Example Event Payload**
+
+  {
+    "planet_id": "fe9732a9-b905-4934-8835-ed5a93494397",
+    "resource": "d008879e-b5d9-47da-af4e-3c8f40b7c9ee",
+    "resource_type": "coal"
+  }

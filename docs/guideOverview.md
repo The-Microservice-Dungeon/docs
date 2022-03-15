@@ -36,7 +36,7 @@ Deep Dive [Commands](/game/commands.md).
 
 How does the [world/map](/dungeon.md) what else do i need to now to play?
 
-What can I do with my [robot](/robot.md)?
+What can I do with my [robot](/robotEntry.md)?
 
 What is the [economy](/trading/economy.md) and what [items](/trading/tradeables.md) can i buy?
 

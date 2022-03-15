@@ -9,6 +9,8 @@ sidebar_position: 4
 
 The map represents the gameworld and is one of the central services in our microservice dungeon game.
 
+For a more comprehensive overwiev of the gameworld please refer to the [Map Service](/map.md)
+
 It consists of several planets, connected with other neighbouring planets.
 
 ![Dungeon Example](/img/rules/dungeon.png)
@@ -149,7 +151,7 @@ Actions of the same phase will be batched together and executed simultaniusly fo
 8. Mining
 9. Regenerating
 
-- Repairing means buying a repair at a space station.
+- Repairing means buying a repair item at a space station.
 
 - Battleing (with an item) is executed before Battleing(without an item) so you could destroy someone who is attacking you with an item and in that case you don't suffer damage to your robot.
 

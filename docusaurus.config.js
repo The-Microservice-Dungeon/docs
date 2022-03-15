@@ -116,7 +116,24 @@ module.exports = {
             docId: "trading_entry",
             position: "left",
             label: "Trading Service",
-
+          },
+          {
+            type: "doc",
+            docId: "robot_entry",
+            position: "left",
+            label: "Robot Service",
+          },
+          {
+            type: "doc",
+            docId: "map_entry",
+            position: "left",
+            label: "Map Service",
+          },
+          {
+            type: "doc",
+            docId: "gameLog_entry",
+            position: "left",
+            label: "GameLog Service",
           },
           {
             label: "Map",
