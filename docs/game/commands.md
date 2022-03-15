@@ -16,7 +16,9 @@ The players recieves an id, to find the right event, that informs him of the out
 
 How does a command look like?
 
+
 >**example command:**
+
 
     {
 
