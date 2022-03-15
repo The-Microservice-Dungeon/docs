@@ -12,4 +12,3 @@ Everything you need to know about the robots.
 ## [Robot Actions](/robot/robotActions.md)
 
 What can you make a robot do?
-

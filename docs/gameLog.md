@@ -66,3 +66,8 @@ Successes of a player that are honoured accross multiple games. Similar to "Achi
 
     GET achieved global trophies
     GET achieved trophies for a player
+
+## Repository Link GameLog
+
+[Repository Link GameLog](https://github.com/The-Microservice-Dungeon/gamelog)
+
