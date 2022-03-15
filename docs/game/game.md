@@ -6,12 +6,12 @@ sidebar_position: 1
 
 Items are handled seperantly, to make it easier forthe other services.
 The Item use is always befor the normal corresponding action.
-The current phases of the execution part of a round are these(for more information look in the technical views of [robot](/robot.md) and [trading](/trading/tradingService.md)):
+The current phases of the execution part of a round are these(for more information look in the technical views of [robot](/robotEntry.md) and [trading](/trading/tradingService.md)):
 
     1. Blocking 
     2. Trading
     3. Moving (with an item)
-    4.Moving (without an item)
+    4. Moving (without an item)
     5. Repairing
     6. Battleing (with an item)
     7. Battleing(without an item)
@@ -22,11 +22,38 @@ The current phases of the execution part of a round are these(for more informati
 
 ### Before a game
 
-Before the start of a game there are these three events.
+Before the start of a game there are these three gameservice related events events.
 
 * Game Created
 
 * Player "name" joined the game. (optional, if no player joins then this event is not produced)
+
+* *Excursus:* The gameworld is created through a REST call to the [map service](/map.md). The gameworld is automaticly sized to the created game maximal player and round ammount.
+
+>**POST**
+
+    http://{defaultHost}/gameworlds
+
+>**example request payload**
+
+    {
+    "gameworld": {
+        "player_amount": 100,
+        "round_amount": 1000
+    }
+    }
+
+* The map service is producing an event for the created gameworld in the channel **gameworld-created**
+
+>**example event payload**
+
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "spacestation_ids": [
+    "497f6eca-6276-4993-bfeb-53cbbbba6f08"
+  ],
+  "status": "active"
+}
 
 * Game started
 
@@ -49,3 +76,7 @@ The final event is:
 ## Cheat Sheet
 
 ![Game Timeline](/img/gameTimeline.png)
+
+## Repository Link Game
+
+[Repository Link Game](https://github.com/The-Microservice-Dungeon/game/tree/main/src/main/kotlin/microservice/dungeon/game/aggregates)

@@ -25,7 +25,7 @@ You will be uning the REST Call for that:
 
     http://{defaultHost}/players
 
->**example payload**
+>**example request payload**
 
     {
         "name": "Rigatoni",
@@ -48,7 +48,7 @@ If you 'loose' your `bearerToken`, you can get it aggain with this REST Call:
 
     http://{defaultHost}/players
 
->**example payload**
+>**example response payload**
 
     {
         "name": "Rigatoni",
@@ -158,7 +158,7 @@ After that your player schould issue the following `buy command` via REST call t
 
     http://{defaultHost}/commands
 
->**example payload**
+>**example request payload**
 
     {
 
@@ -182,7 +182,7 @@ After that your player schould issue the following `buy command` via REST call t
 As a Response you will get a `transactionId`, which you have to save.
 
 
->**example response**
+>**example response payload**
 
     {
     "transactionId": "d290f1ee-6c54-4b01-90e6-d701748f0851"
@@ -288,7 +288,7 @@ With one of the `planetId` you schould have a destination for your move robot co
 
     http://{defaultHost}/planets/{planet_id}
 
->**example payload**
+>**example response payload**
 
     {
 
@@ -333,7 +333,7 @@ Bewere now you have to fill in `robotId`, and `planetId` here it is not clear, i
 
     http://{defaultHost}/commands
 
->**example payload**
+>**example request payload**
 
     {
 
@@ -363,12 +363,10 @@ ___
 
 ## What's next?
 
-
 Deep Dive [Commands](/game/commands.md).
 
 How does the [world/map](/dungeon.md) what else do i need to now to play?
 
-What can I do with my [robot](/robot.md)?
+What can I do with my [robot](/robotEntry.md)?
 
 What is the [economy](/trading/economy.md) and what [items](/trading/tradeables.md) can i buy?
-
