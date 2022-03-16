@@ -2,15 +2,15 @@
 sidebar_position: 3
 ---
 
-# Game Basics / Technical Gamecycle
+# Game Basics / Technical Game cycle
 
-When installation is complete, "Game Service" is initialy online and running.
+When installation is complete, "Game Service" is initially online and running.
 
 :::danger Take care
 
 There is some preparation needed, before it is possible to play.
 
-In the API documentation you will find, that it says you need an **BearerAuth (admin)**. You can ignore this information. **It is obsolet**.  
+In the API documentation you will find that it says you need an **BearerAuth (admin)**. You can ignore this information. **It is obsolete**.  
 
 :::
 
@@ -37,21 +37,19 @@ You should get a `UUID` as a response! If not something went wrong.
         "gameId": "d290f1ee-6c54-4b01-90e6-d701748f0851"
     }
 
+* A "Game" consists of rounds, explained in [Gameloop](/game/game.md). You have to specify the amount of  rounds that will be played till the automatic end of a game.
 
-* A "Game" consists of rounds, explained in [Gameloop](/game/game.md). You have to specify the ammount of  rounds that will be played till the automatic end of a game.
-
-
-* Also you can specify the ammount of players that will be competing. For a game to start, it is not nessecery to reach the maximum ammount of players. The game mecahnics like mapsize will scale with the actual ammount of players at the **"3. Start Game"**.
+* Also, you can specify the number of players that will be competing. For a game to start, it is not necessary to reach the maximum number of players. The game mechanics like map size will scale with the actual number of players at the **"3. Start Game"**.
 
 ### 1.1 Change Game Parameters
 
 Before **"3. Start Game"** or during a  **"running"** game you can change these parameters.
 
-#### 1.1.1 amount of rounds in a game
+#### 1.1.1 number of rounds in a game
 
-This changes how many rounds schould be played in a given game in total.
-So you can lenghten or shorten a game.
-If the game is allready **"running"** and you shorten below the **"currentRoundNumber"** af that game, that game will conclude.
+This changes how many rounds should be played in each game in total.
+So you can lengthen or shorten a game.
+If the game is already **"running"** and you shorten below the **"currentRoundNumber"** of that game, that game will conclude.
 
 >**PATCH**
 
@@ -63,12 +61,12 @@ If the game is allready **"running"** and you shorten below the **"currentRoundN
     "maxRounds": 0
     }
 
-#### 1.1.2 lenght of rounds in a game
+#### 1.1.2 length of rounds in a game
 
 This changes how long the duration of the rounds will be.
-Standart lenght is 60 Seconds in total. Consisting of 3/4 *Command Collection time* and 1/4 *Command Execution time*
+Standard length is 60 Seconds in total. Consisting of 3/4 *Command Collection time* and 1/4 *Command Execution time*
 
-Imput has to be given in **MILLISECONDS(1000ms = 1s)**.
+Input has to be given in **MILLISECONDS(1000ms = 1s)**.
 
 >**PATCH**
 
@@ -90,7 +88,7 @@ The start of a game is simple. Just use this REST Call
 
         http://{defaultHost}/games/{gameId}/gameCommands/start
 
-You can controll if a game is running with the REST calls:
+You can control if a game is running with the REST calls:
 
 >**GET**
 
@@ -135,13 +133,13 @@ Or you could look if the time is changed with this REST Call.
 
         }
 
-## 4. Player issues Commandes
+## 4. Player issues Commands
 
 Please refer to the Chapter [Player Basics](https://the-microservice-dungeon.github.io/docs/quickGuide/howToBuildAPlayer)
 
 ## 5. End Game(play)
 
-There are three posipilities how a game should end.
+There are three possibilities how a game should end.
 
 * The game has reached the round number, which was defined earlier.
 
@@ -181,3 +179,4 @@ The response will look like this. Pay attention to the **"gameStatus": "running"
 ## Repository Link Game
 
 [Repository Link Game](https://github.com/The-Microservice-Dungeon/game/tree/main/src/main/kotlin/microservice/dungeon/game/aggregates)
+
