@@ -68,6 +68,7 @@ You can the information for your robot by using this REST call:
 
 ## Robot Data
 
+
 * **general**: `id`, `player`, `planet`, `alive(y/n)` -> These are self-explanatory.
 
 * **Max stats** of robot according to current upgrade status: `maxHealth`, `maxEnergy`, `energyRegen`, `attackDamage`, `miningSpeed` -> These are variables that can be improved by upgrades bought by the trading service.
@@ -76,11 +77,13 @@ You can the information for your robot by using this REST call:
 
 * **Current upgrade level**: healthLevel, damageLevel, miningSpeedLevel, miningLevel, energyLevel, energyRegenLevel, storageLevel -> you can only upgrade to the next level via trading service.
 
+
 * **object “inventory” ** with attributes: `maxStorage`, `usedStorage`, `storedCoal`, `storedIron`, `storedGem`, `storedGold`, `storedPlatin` (https://github.com/The-Microservice-Dungeon/robot/blob/main/src/main/kotlin/com/msd/robot/domain/Inventory.kt)
 
 ## Spawning a Robot
 
 The spawn of the robot is a direct result of a "Buy robot command" to the trading service.
+
 If a player has enough money the trading service uses a REST call to the robot service.
 
 The expected properties are:
@@ -110,7 +113,9 @@ All expected properties are UUIDs. The robot service then creates the new robot 
 
     }
 
+
 The player listens to the robot channel: **spawn-notification** and receives and can match the `transactionId` in the event header, which he received for the command to the event.
+
 
 >**Event Payload**
 
@@ -122,7 +127,9 @@ The player listens to the robot channel: **spawn-notification** and receives and
     ]
     }
 
+
 In addition there will be an event in the channel **neighbours**, which tells you all the neighbouring planets for the new robot, to which you could move the new bought robot.
+
 
 >**Event Payload**
 
@@ -159,6 +166,7 @@ Robot service: validate robot position and do the upgrade (answer is success or 
 
 After that the trading services is throwing an event, which the player has to consume to be informed about success or failure of his command. This is seen as a `trade` by the trading service. [Trading Service Deep Dive](/tradingIntro.md)
 
+
 The robot service only has to validate the position of the given robot and check if the bought upgrade is possible.
 
 Upgrade Status: robot receives the data from trading if upgrades are bought, stores this and tracks the multiplier (which is dependent on the total bought upgrades for each robot)
@@ -191,6 +199,7 @@ This is communicated by the trading service in the following way.
 
 Items bought by a robot are behaving the same way as a bought upgrade.
 
+
 >**POST**
 
         http://{defaultHost}/robots/{robot-uuid}/inventory/items
@@ -205,6 +214,7 @@ Items bought by a robot are behaving the same way as a bought upgrade.
     }
 
 Also if a trading command is to sell resources. All resources present in a robot inventory are sold.
+
 
 >**POST**
 
@@ -222,7 +232,9 @@ Also if a trading command is to sell resources. All resources present in a robot
 
     }
 
+
 Also there is a way to change the global variables for all robots, for example to make movement regardless of the movement difficulty of the map scale with an additional factor.
+
 
 >**PATCH**
 
@@ -318,6 +330,7 @@ Also there is a way to change the global variables for all robots, for example t
 > **Blocking**: blockingBaseCost + blockingMaxEnergyProportion * energyCapacity
 
 > **Mining**: miningMultiplier * (mining_strength_level + miningWeight)
+
 
 > **Movement**: movementMultiplier * movement_difficulty
 
