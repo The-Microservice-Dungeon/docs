@@ -6,7 +6,7 @@ sidebar_position: 1
 
 ## Robot and its Information
 
-The robot has several variables that you have to keep an eye out for.
+The robot has several variables that you must keep an eye out for.
 
 You can the information for your robot by using this REST call:
 
@@ -64,11 +64,11 @@ You can the information for your robot by using this REST call:
 
 * Here you can find the REST Controller (https://github.com/The-Microservice-Dungeon/robot/blob/main/src/main/kotlin/com/msd/robot/application/RobotController.kt)
 
-* Here is the robot damain overview: (https://github.com/The-Microservice-Dungeon/robot/blob/main/src/main/kotlin/com/msd/robot/domain/Robot.kt)
+* Here is the robot domain overview: (https://github.com/The-Microservice-Dungeon/robot/blob/main/src/main/kotlin/com/msd/robot/domain/Robot.kt)
 
 ## Robot Data
 
-* **general**: `id`, `player`,`planet`, `alive(y/n)` -> These are self-explanatory.
+* **general**: `id`, `player`, `planet`, `alive(y/n)` -> These are self-explanatory.
 
 * **Max stats** of robot according to current upgrade status: `maxHealth`, `maxEnergy`, `energyRegen`, `attackDamage`, `miningSpeed` -> These are variables that can be improved by upgrades bought by the trading service.
 
@@ -76,11 +76,11 @@ You can the information for your robot by using this REST call:
 
 * **Current upgrade level**: healthLevel, damageLevel, miningSpeedLevel, miningLevel, energyLevel, energyRegenLevel, storageLevel -> you can only upgrade to the next level via trading service.
 
-* **object “inventory”** with attributes: `maxStorage`, `usedStorage`, `storedCoal`, `storedIron`, `storedGem`, `storedGold`, `storedPlatin` (https://github.com/The-Microservice-Dungeon/robot/blob/main/src/main/kotlin/com/msd/robot/domain/Inventory.kt)
+* **object “inventory” ** with attributes: `maxStorage`, `usedStorage`, `storedCoal`, `storedIron`, `storedGem`, `storedGold`, `storedPlatin` (https://github.com/The-Microservice-Dungeon/robot/blob/main/src/main/kotlin/com/msd/robot/domain/Inventory.kt)
 
 ## Spawning a Robot
 
-The spawn of the robot is a direct result of a "Buy robot comand" to the trading service.
+The spawn of the robot is a direct result of a "Buy robot command" to the trading service.
 If a player has enough money the trading service uses a REST call to the robot service.
 
 The expected properties are:
@@ -110,7 +110,7 @@ All expected properties are UUIDs. The robot service then creates the new robot 
 
     }
 
-The player listens to the robot chanell: **spawn-notification** and recives and can match the `transactionId` in the event header, which he recived for the command to the event.
+The player listens to the robot channel: **spawn-notification** and receives and can match the `transactionId` in the event header, which he received for the command to the event.
 
 >**Event Payload**
 
@@ -122,7 +122,7 @@ The player listens to the robot chanell: **spawn-notification** and recives and 
     ]
     }
 
-In addition there will be an event in the channel **neighbours**, wich tells you all the neighboring planets for the new robot, to wich you could move the new bought robot.
+In addition there will be an event in the channel **neighbours**, which tells you all the neighbouring planets for the new robot, to which you could move the new bought robot.
 
 >**Event Payload**
 
@@ -138,8 +138,8 @@ In addition there will be an event in the channel **neighbours**, wich tells you
 
 ## Upgrade transaction
 
-* game service: issues the command which was received by the player to the trading service
-* trading service: processes the command, checks if position is a spacestation, checks if player has enough money, sends request to robot, receives answer from robot, adjusts wallet of player and throws success or failure event. The trading service is using a REST call to the robot service for this.
+* Game service: issues the command which was received by the player to the trading service
+* Trading service: processes the command, checks if position is a space station, checks if player has enough money, sends request to robot, receives answer from robot, adjusts wallet of player and throws success or failure event. The trading service is using a REST call to the robot service for this.
 
 >**POST**
 
@@ -157,23 +157,23 @@ In addition there will be an event in the channel **neighbours**, wich tells you
 
 Robot service: validate robot position and do the upgrade (answer is success or failure)
 
-After that the trading services is trowing an event, which the player has to conusme to be informed abeout succes or failure of his command. This is seen as a `trade` by the trading service. [Trading Service Deep Dive](/tradingIntro.md)
+After that the trading services is throwing an event, which the player has to consume to be informed about success or failure of his command. This is seen as a `trade` by the trading service. [Trading Service Deep Dive](/tradingIntro.md)
 
 The robot service only has to validate the position of the given robot and check if the bought upgrade is possible.
 
-Upgrade Status: robot receives the data from trading if upgrades are bought, stores this and tracks the multiplier (which is dependant on the total bought upgrades for each robot)
+Upgrade Status: robot receives the data from trading if upgrades are bought, stores this and tracks the multiplier (which is dependent on the total bought upgrades for each robot)
 
 ## Additional usefull REST calls
 
-The next REST call can be used to get all robots.For example to check if the robot is belonging to the specific player, or to evaluete how many robots a player has.
+The next REST call can be used to get all robots. For example to check if the robot is belonging to the specific player, or to evaluate how many robots a player has.
 
 >**GET**
 
         http://{defaultHost}/robots
 
-The trading service uses, in addition to the above written, theses REST calls to the robot service, to communicate trading command transactions. Again the Trading Service is throwing the events that can be interpreted by the player.
+The trading service uses, in addition to the above written, theses REST calls to the robot service, to communicate trading command transactions. Again, the Trading Service is throwing the events that can be interpreted by the player.
 
-* Instead of using the regenerate action of the robot you could buy a full health or energy regeneration from a spacestation.
+* Instead of using the regenerate action of the robot you could buy a full health or energy regeneration from a space station.
 This is communicated by the trading service in the following way.
 
 >**POST**
@@ -189,7 +189,7 @@ This is communicated by the trading service in the following way.
 
     }
 
-Items bought by a Robot are behaving the same way as a bought upgrade.
+Items bought by a robot are behaving the same way as a bought upgrade.
 
 >**POST**
 
@@ -204,7 +204,7 @@ Items bought by a Robot are behaving the same way as a bought upgrade.
 
     }
 
-Also if a trading command is to sell resorces. All resources present in a robot inventory are sold.
+Also if a trading command is to sell resources. All resources present in a robot inventory are sold.
 
 >**POST**
 
@@ -222,7 +222,7 @@ Also if a trading command is to sell resorces. All resources present in a robot 
 
     }
 
-Also there is a way to change the global variables for all robots, for example to make movement regagrles of the movement difficulty of the map scale with an additional factor.
+Also there is a way to change the global variables for all robots, for example to make movement regardless of the movement difficulty of the map scale with an additional factor.
 
 >**PATCH**
 
@@ -317,13 +317,13 @@ Also there is a way to change the global variables for all robots, for example t
 
 > **Blocking**: blockingBaseCost + blockingMaxEnergyProportion * energyCapacity
 
-> ************Mining**: miningMultiplier * (mining_strength_level + miningWeight)
+> **Mining**: miningMultiplier * (mining_strength_level + miningWeight)
 
 > **Movement**: movementMultiplier * movement_difficulty
 
 > **Attacking**: attackingMultiplier *(damage_level + attackingWeight)
 
-## Usefull Events by Robot
+## Useful Events by Robot
 
 Everyone should keep the channel: **robot-destroyed** in mind.
 This channel is the only way to find out if your robot has been destroyed.
@@ -342,3 +342,5 @@ Other Events are all in connection with actions. You can see examples [here](/ro
 ## Repository Link Robot
 
 [Repository Link Robot](https://github.com/The-Microservice-Dungeon/robot/tree/main/src/main/kotlin/com/msd)
+
+

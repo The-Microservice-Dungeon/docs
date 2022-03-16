@@ -24,7 +24,7 @@ Trading is also the only service which saves the money of the registered `Player
 
 ## Spawns and Spacestations
 
-Even if the trading service is not the owner of the spacestations, their positions on the map are still needed and so saved to match the robot position with the positions of the spacestations in case of a request to the trading service. For example if a robot wants to sell resources, but is not located on spacestation. The data initially comes from the map service which has to emit them as an event for every spacestation:
+Even if the trading service is not the owner of the space stations, their positions on the map are still needed and so saved to match the robot position with the positions of the space stations in case of a request to the trading service. For example, if a robot wants to sell resources, but is not located on space station. The data initially comes from the map service which has to emit them as an event for every space station:
 
 {
   "planet_id": "fe9732a9-b905-4934-8835-ed5a93494397"
@@ -69,7 +69,6 @@ For a deep dive on commands please look here: [Commands](/game/commands.md)
 
 * For the `player` there are **no relevant** REST calls to the trading service
 
-
 ## Events for player
 
 ### bank-created
@@ -85,7 +84,7 @@ Channel: **bank-created**
 
 ### current-item-prices
 
-At the begining of each round the new item buy-prices are anounced
+At the beginning of each round the new item buy-prices are announced
 
 Channel: **current-item-prices**
 
@@ -98,7 +97,7 @@ Channel: **current-item-prices**
 
 ### current-resource-prices
 
-At the begining of each round the new sell-resources prices are anounced
+At the beginning of each round the new sell-resources prices are announced
 
 Channel: **current-resource-prices**
 
@@ -111,7 +110,7 @@ Channel: **current-resource-prices**
 
 ### Trades
 
-The event which indicates what happened to the trade. It also contains additional data about the result of the trade in data. For example if a robot was bought, data contains the new robot object.
+The event which indicates what happened to the trade. It also contains additional data about the result of the trade in data. For example, if a robot was bought, data contains the new robot object.
 
 Channel: **trades**
 
@@ -238,7 +237,7 @@ There are four kinds of `headers`:
 
 ## Rest for other services
 
-The trading service is reciving the `commands` from the game service via REST call.
+The trading service is receiving the `commands` from the game service via REST call.
 
 > **POST**
 
@@ -261,7 +260,7 @@ The trading service is reciving the `commands` from the game service via REST ca
 
     ]
 
-The gamelog service is using a get comand to recive the current balances of the `players` bank accounts.
+The gameLog service is using a get command to receive the current balances of the `players` bank accounts.
 
 For the current round:
 
@@ -297,3 +296,5 @@ Or for a specific round
         }
 
     ]
+
+

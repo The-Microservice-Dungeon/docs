@@ -3,7 +3,7 @@ id: gameLog_entry
 sidebar_position: 12
 ---
 
-# Gamelog Service Technical View
+# GameLog Service Technical View
 
 :::warning
 
@@ -15,9 +15,9 @@ Please refer to [GameLog Repository](https://github.com/The-Microservice-Dungeon
 
 There are multiple scoreboards:
 
-* the global scoreboard
+* The global scoreboard
 
-* multiple scoreboards for the different event categories:
+* Multiple scoreboards for the different event categories:
         Fighting
         Mining
         Traveling
@@ -27,7 +27,7 @@ The weighting for calculating the scores won't be changeable during the game.
 
 ## Scoreboard
 
-Overview of each players score within the current running game.
+Overview of each player score within the current running game.
 
 >**GET**
 
@@ -60,7 +60,7 @@ Overview of each players score within the current running game.
 
 ## Trophy
 
-Successes of a player that are honoured accross multiple games. Similar to "Achievments" in other games
+Successes of a player that are honoured across multiple games. Like "Achievements" in other games
 
 ### Trophies
 
@@ -70,4 +70,5 @@ Successes of a player that are honoured accross multiple games. Similar to "Achi
 ## Repository Link GameLog
 
 [Repository Link GameLog](https://github.com/The-Microservice-Dungeon/gamelog)
+
 
