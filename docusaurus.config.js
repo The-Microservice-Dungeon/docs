@@ -20,7 +20,7 @@ module.exports = {
       robot: "https://raw.githubusercontent.com/The-Microservice-Dungeon/robot/main/swagger/v5/asyncapi.yaml",
       trading: "https://raw.githubusercontent.com/The-Microservice-Dungeon/trading/main/swagger/v1/asyncAPI.yaml",
       gamelog: "https://raw.githubusercontent.com/The-Microservice-Dungeon/gamelog/main/docs/event-spec.yaml",
-      game: "https://raw.githubusercontent.com/The-Microservice-Dungeon/game/main/doc/game_service_asyncapi_v1.0.0.yaml",
+      game: "https://raw.githubusercontent.com/The-Microservice-Dungeon/game/main/doc/asyncapi-doc.yaml",
     }
   },
 
@@ -46,7 +46,7 @@ module.exports = {
             routePath: "/openapi/gamelog"
           },
           {
-            specUrl: 'https://raw.githubusercontent.com/The-Microservice-Dungeon/game/main/doc/game_service_api_v3.2.0.yaml',
+            specUrl: 'https://raw.githubusercontent.com/The-Microservice-Dungeon/game/main/doc/oepnapi-doc.yaml',
             routePath: "/openapi/game"
           }
         ],
