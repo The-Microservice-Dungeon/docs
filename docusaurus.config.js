@@ -80,6 +80,11 @@ module.exports = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      announcementBar: {
+        id: 'docs_moved',
+        content: '⚠️ The project and the documentation have been moved to GitLab. <a href="https://the-microservice-dungeon.gitlab.io/docs/">Click here to visit the new documentation.</a> ⚠️',
+        isCloseable: false,
+      },
       navbar: {
         title: "The Microservice Dungeon",
         logo: {
